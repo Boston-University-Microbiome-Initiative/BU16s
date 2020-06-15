@@ -16,8 +16,14 @@ else
     PAIRED=true
 fi
 
+# Output file locations
+INTERMEDIATEDIR=$OUTPUTDIR/intermediate
+
 # Show welcome
 python $SCRIPTSDIR/welcome.py -i ../inputs.sh
+echo
+echo STARTING AT $(date)
+echo
 
 ### 1) CREATE QIIME2 ARTIFACT
 echo CREATING QIIME ARTIFACT
@@ -27,13 +33,13 @@ echo
 eval $cmd
 
 
-demux_artifact=$OUTPUTDIR/"$PROJECTNAME"_raw.qza
+demux_artifact=$INTERMEDIATEDIR/"$PROJECTNAME"_raw.qza
 echo Saved QIIME artifact to: $demux_artifact
 echo
 
 ### 2) Trim primers
 echo TRIMMING PRIMERS
-trim_output=$OUTPUTDIR/"$PROJECTNAME"_trimmed.qza
+trim_output=$INTERMEDIATEDIR/"$PROJECTNAME"_trimmed.qza
 if [ $PAIRED == "true" ]
 then
     trim_setting="trim-paired"
@@ -83,7 +89,7 @@ echo
 
 ### 3) Generate ASVs
 echo GENERATING ASVs
-dada2_output=$OUTPUTDIR/dada2
+dada2_output=$INTERMEDIATEDIR/dada2
 dada2_params="--i-demultiplexed-seqs $trim_output \
     --p-n-threads 0 \
     --verbose \
@@ -99,7 +105,7 @@ eval $cmd
 
 ### 4) Classify
 echo CLASSIFY ASVs
-classification_output=$OUTPUTDIR/"$PROJECTNAME"_SILVA99.qza
+classification_output=$INTERMEDIATEDIR/"$PROJECTNAME"_SILVA99.qza
 cmd="qiime feature-classifier classify-consensus-vsearch \
 --i-query $dada2_output/representative_sequences.qza \
 --i-reference-reads $SILVA_SEQUENCES \
@@ -114,3 +120,16 @@ cmd="qiime feature-classifier classify-consensus-vsearch \
 echo $cmd
 eval $cmd
 
+### 5) Export
+echo EXTRACTING PROCESSED DATA
+# Extract ASV table
+qiime tools export --input-path $dada2_output/table.qza --output-path $OUTPUTDIR
+mv $OUTPUTDIR/feature-table.biom $OUTPUTDIR/"$PROJECTNAME"_ASV.biom
+
+# Extract taxonomy
+qiime tools export --input-path $classification_output --output-path $OUTPUTDIR
+mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_SILVA99.tsv
+
+echo
+echo PROCESSED DATA IS AVAILABLE AT $OUTPUTDIR
+echo FINISHED AT $(date)
