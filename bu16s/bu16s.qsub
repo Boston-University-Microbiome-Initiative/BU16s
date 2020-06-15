@@ -86,7 +86,7 @@ echo GENERATING ASVs
 dada2_output=$OUTPUTDIR/dada2
 dada2_params="--i-demultiplexed-seqs trimmed.qza \
     --p-n-threads 0 \
-    -- verbose \
+    --verbose \
     --output-dir dada2"
 if [ $PAIRED == "true" ]
 then

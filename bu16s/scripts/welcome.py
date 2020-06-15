@@ -30,4 +30,6 @@ if __name__ == '__main__':
 
     text += '#' * width
 
+    text = ['\t\t'+line for line in text]
+
     print(text)

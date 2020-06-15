@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="join pairs">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/download_test.sh" />
+    <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/bu16s.qsub" afterPath="$PROJECT_DIR$/bu16s/bu16s.qsub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" afterPath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputs.sh" afterPath="$PROJECT_DIR$/inputs.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/scripts/welcome.py" afterPath="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inputs.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inputs.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inputs.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -45,8 +43,8 @@
       <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="97" column="9" lean-forward="false" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+            <state relative-caret-position="479">
+              <caret line="88" column="6" lean-forward="false" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -62,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="welcome.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state relative-caret-position="648">
+              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -92,11 +90,11 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
-        <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
         <option value="$PROJECT_DIR$/download_test.sh" />
-        <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
         <option value="$PROJECT_DIR$/inputs.sh" />
+        <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
+        <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
       </list>
     </option>
   </component>
@@ -306,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592250774046</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="dada2">
+      <created>1592253187453</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1592253187453</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -354,7 +359,8 @@
     <MESSAGE value="correct primers" />
     <MESSAGE value="64-&gt;33?" />
     <MESSAGE value="join pairs" />
-    <option name="LAST_COMMIT_MESSAGE" value="join pairs" />
+    <MESSAGE value="dada2" />
+    <option name="LAST_COMMIT_MESSAGE" value="dada2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -385,14 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1014">
@@ -400,6 +398,14 @@
           <folding>
             <element signature="e#152#209#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -413,16 +419,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="97" column="9" lean-forward="false" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+        <state relative-caret-position="479">
+          <caret line="88" column="6" lean-forward="false" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs.sh">
+    <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="648">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding />
         </state>
       </provider>
