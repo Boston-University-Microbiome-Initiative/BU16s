@@ -9,5 +9,5 @@ conda activate qiime2-2020.2
 source ../inputs.sh
 
 ### 1) CREATE QIIME2 ARTIFACT
-python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -f='$FWD_FMT' -r='$REV_FMT' -o $OUTPUTDIR
+python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -f="$FWD_FMT" -r="$REV_FMT" -o $OUTPUTDIR
 
