@@ -42,8 +42,8 @@
       <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="133" column="46" lean-forward="false" selection-start-line="133" selection-start-column="46" selection-end-line="133" selection-end-column="46" />
+            <state relative-caret-position="567">
+              <caret line="29" column="117" lean-forward="false" selection-start-line="29" selection-start-column="117" selection-end-line="29" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -383,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592258030718</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="extract outputs">
+      <created>1592259463683</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1592259463683</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -439,7 +446,8 @@
     <MESSAGE value="project name to manifest script" />
     <MESSAGE value="no idea" />
     <MESSAGE value="imported silva to qiime" />
-    <option name="LAST_COMMIT_MESSAGE" value="imported silva to qiime" />
+    <MESSAGE value="extract outputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract outputs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -506,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="133" column="46" lean-forward="false" selection-start-line="133" selection-start-column="46" selection-end-line="133" selection-end-column="46" />
+        <state relative-caret-position="567">
+          <caret line="29" column="117" lean-forward="false" selection-start-line="29" selection-start-column="117" selection-end-line="29" selection-end-column="117" />
           <folding />
         </state>
       </provider>

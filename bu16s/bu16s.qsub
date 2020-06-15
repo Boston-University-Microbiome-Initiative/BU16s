@@ -27,8 +27,10 @@ echo
 
 ### 1) CREATE QIIME2 ARTIFACT
 echo CREATING QIIME ARTIFACT
-cmd="python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -p $PROJECTNAME -f=$FWD_FMT -r=$REV_FMT -o $OUTPUTDIR"
+cmd="python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -p $PROJECTNAME -f=$FWD_FMT -r=$REV_FMT -o $INTERMEDIATEDIR"
+echo --------------------------------------------------------------------------------------
 echo $cmd
+echo --------------------------------------------------------------------------------------
 echo
 eval $cmd
 
@@ -65,7 +67,9 @@ cmd="qiime cutadapt $trim_setting \
     --p-cores $(nproc) \
     --verbose \
     --o-trimmed-sequences $trim_output"
+echo --------------------------------------------------------------------------------------
 echo $cmd
+echo --------------------------------------------------------------------------------------
 echo
 eval $cmd
 echo
@@ -100,7 +104,10 @@ then
 else
     cmd="qiime dada2 denoise-single --p-trunc-len 200 $dada2_params"
 fi
+echo --------------------------------------------------------------------------------------
 echo $cmd
+echo --------------------------------------------------------------------------------------
+echo
 eval $cmd
 
 ### 4) Classify
@@ -117,7 +124,9 @@ cmd="qiime feature-classifier classify-consensus-vsearch \
 --p-maxaccepts all \
 --verbose \
 --o-classification $classification_output"
+echo --------------------------------------------------------------------------------------
 echo $cmd
+echo --------------------------------------------------------------------------------------
 eval $cmd
 
 ### 5) Export
