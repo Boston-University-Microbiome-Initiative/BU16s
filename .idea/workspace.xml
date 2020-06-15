@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" afterPath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/bu16s.qsub" afterPath="$PROJECT_DIR$/bu16s/bu16s.qsub" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1505">
-              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+            <state relative-caret-position="689">
+              <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -80,9 +80,9 @@
         <option value="$PROJECT_DIR$/bu16s/bu16s.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
-        <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
         <option value="$PROJECT_DIR$/inputs.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
+        <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
       </list>
     </option>
   </component>
@@ -92,9 +92,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="1358" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -295,11 +295,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592249600728</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="64-&gt;33?">
+      <created>1592249814658</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1592249814658</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="950" y="0" width="980" height="1030" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -341,7 +348,8 @@
     <MESSAGE value="added welcome" />
     <MESSAGE value="echo commands" />
     <MESSAGE value="correct primers" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct primers" />
+    <MESSAGE value="64-&gt;33?" />
+    <option name="LAST_COMMIT_MESSAGE" value="64-&gt;33?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -388,14 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1505">
-          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -403,6 +403,14 @@
           <folding>
             <element signature="e#152#209#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
