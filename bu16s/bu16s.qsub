@@ -21,7 +21,10 @@ python $SCRIPTSDIR/welcome.py -i ../inputs.sh
 
 ### 1) CREATE QIIME2 ARTIFACT
 echo CREATING QIIME ARTIFACT
-python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -f="$FWD_FMT" -r="$REV_FMT" -o $OUTPUTDIR
+cmd=python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -f="$FWD_FMT" -r="$REV_FMT" -o $OUTPUTDIR
+echo $cmd
+eval $cmd
+
 demux_artifact=$OUTPUTDIR/artifact.qza
 echo QIIME ARTIFACT CREATED AT: $demux_artifact
 echo
@@ -40,7 +43,7 @@ else
     rev_option="p-anywhere"
 fi
 
-qiime cutadapt $trim_setting \
+cmd="qiime cutadapt $trim_setting \
     --i-demultiplexed-sequences $demux_artifact \
     --$front_option $FWD_PRIMER \
     --$rev_option $REV_PRIMER \
@@ -53,4 +56,6 @@ qiime cutadapt $trim_setting \
     --p-minimum-length 50 \
     --p-cores $(nproc) \
     --verbose \
-    --o-trimmed-sequences $trim_output
+    --o-trimmed-sequences $trim_output"
+echo $cmd
+eval $cmd
