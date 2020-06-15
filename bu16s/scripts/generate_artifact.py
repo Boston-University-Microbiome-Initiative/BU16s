@@ -1,5 +1,5 @@
 """
-Generate QIIME2 Manifest File
+Generate QIIME2 Manifest File and Artifact
 
 https://docs.qiime2.org/2020.2/tutorials/importing/#fastq-manifest-formats
 
@@ -9,6 +9,7 @@ from argparse import ArgumentParser, RawTextHelpFormatter
 from glob import glob
 import os
 import pandas as pd
+from qiime2 import Artifact
 
 def gen_manifest(input_dir, fwd_fmt, rev_fmt):
     """
@@ -56,6 +57,21 @@ def gen_manifest(input_dir, fwd_fmt, rev_fmt):
     manifest = manifest[col_order]
     return manifest
 
+def create_artifact(manifest_path, paired, outfile):
+    """
+    Create QIIME2 artifact
+    """
+    if paired:
+        import_type = 'SampleData[PairedEndSequencesWithQuality]'
+        import_format = 'PairedEndFastqManifestPhred64V2'
+    else:
+        import_type = 'SampleData[SequencesWithQuality]'
+        import_format = 'SingleEndFastqManifestPhred33V2'
+
+    # Create artifact
+    qza = Artifact.import_data(import_type, manifest_path, import_format)
+    qza.save(outfile)
+
 if __name__ == '__main__':
     """Parse arguments"""
     parser = ArgumentParser(formatter_class=RawTextHelpFormatter, description=__doc__)
@@ -78,5 +94,9 @@ if __name__ == '__main__':
     # Save
     if not os.path.isdir(args.o):
         os.makedirs(args.o)
-    outfile = os.path.join(args.o, 'manifest')
-    manifest.to_csv(outfile, '\t', index=False)
+    manifest_outfile = os.path.join(args.o, 'manifest')
+    manifest.to_csv(manifest_outfile, '\t', index=False)
+
+    """Create artifact"""
+    artifact_outfile = os.path.join(args.o, 'artifact.qza')
+    create_artifact(manifest_outfile, bool(args.r), artifact_outfile)
