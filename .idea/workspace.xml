@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputs.sh" afterPath="$PROJECT_DIR$/inputs.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" afterPath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
+            <state relative-caret-position="285">
+              <caret line="65" column="54" lean-forward="false" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
               <folding>
                 <element signature="e#152#209#0" expanded="true" />
               </folding>
@@ -29,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inputs.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inputs.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inputs.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -52,7 +52,7 @@
       <file leaf-file-name="welcome.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="366">
               <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
               <folding />
             </state>
@@ -76,13 +76,13 @@
       <list>
         <option value="$PROJECT_DIR$/test/manifest" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_manifest.py" />
-        <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
         <option value="$PROJECT_DIR$/inputs.sh" />
+        <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
       </list>
     </option>
   </component>
@@ -288,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592249438375</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="correct primers">
+      <created>1592249600728</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1592249600728</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -365,21 +372,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
+    <entry file="file://$PROJECT_DIR$/inputs.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        <state relative-caret-position="216">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
+    <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
-          <folding>
-            <element signature="e#152#209#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="366">
+          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -391,11 +396,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs.sh">
+    <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="65" column="54" lean-forward="false" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+          <folding>
+            <element signature="e#152#209#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

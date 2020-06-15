@@ -63,7 +63,7 @@ def create_artifact(manifest_path, paired, outfile):
     """
     if paired:
         import_type = 'SampleData[PairedEndSequencesWithQuality]'
-        import_format = 'PairedEndFastqManifestPhred64V2'
+        import_format = 'PairedEndFastqManifestPhred33V2'
     else:
         import_type = 'SampleData[SequencesWithQuality]'
         import_format = 'SingleEndFastqManifestPhred33V2'
