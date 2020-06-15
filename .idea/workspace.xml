@@ -4,6 +4,7 @@
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/bu16s.qsub" afterPath="$PROJECT_DIR$/bu16s/bu16s.qsub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputs.sh" afterPath="$PROJECT_DIR$/inputs.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/inputs.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="16" column="140" lean-forward="false" selection-start-line="16" selection-start-column="140" selection-end-line="16" selection-end-column="140" />
               <folding />
             </state>
           </provider>
@@ -42,8 +43,8 @@
       <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+            <state relative-caret-position="506">
+              <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -91,8 +92,8 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
         <option value="$PROJECT_DIR$/download_test.sh" />
-        <option value="$PROJECT_DIR$/inputs.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
+        <option value="$PROJECT_DIR$/inputs.sh" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
       </list>
     </option>
@@ -331,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592253453874</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="full path to trim">
+      <created>1592253531500</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1592253531501</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -381,7 +389,8 @@
     <MESSAGE value="join pairs" />
     <MESSAGE value="dada2" />
     <MESSAGE value="remove extra space" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove extra space" />
+    <MESSAGE value="full path to trim" />
+    <option name="LAST_COMMIT_MESSAGE" value="full path to trim" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -422,14 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download_test.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -446,10 +447,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inputs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="140" lean-forward="false" selection-start-line="16" selection-start-column="140" selection-end-line="16" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/bu16s.qsub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+        <state relative-caret-position="506">
+          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
           <folding />
         </state>
       </provider>
