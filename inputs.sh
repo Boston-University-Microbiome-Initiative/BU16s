@@ -5,8 +5,8 @@
 export INPUTDIR=/projectnb/talbot-lab-data/msilver/BU16s/test/files
 export OUTPUTDIR=/projectnb/talbot-lab-data/msilver/BU16s/test
 
-export FWD_FMT=-r1.fastq.gz
-export REV_FMT=-r2.fastq.gz
+export FWD_FMT=_1.fastq.gz
+export REV_FMT=_2.fastq.gz
 
 export FWD_PRIMER=GTGCCAGCMGCCGCGGTAA
 export REV_PRIMER=GGACTACHVHHHTWTCTAAT
