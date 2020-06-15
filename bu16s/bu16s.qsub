@@ -6,18 +6,12 @@
 # Load modules and inputs
 module load miniconda
 conda activate qiime2-2020.2
-source ../inputs.sh
 
-# Single end if only FWD
-if [ -z "$REV_FMT" ]
-then
-    PAIRED=false
-else
-    PAIRED=true
-fi
-
-# Output file locations
-INTERMEDIATEDIR=$OUTPUTDIR/intermediate
+# Load parameters
+PARAMETERS=$1
+source $PARAMETERS
+# Make run parameters file
+touch $RUNPARAMETERS
 
 # Show welcome
 python $SCRIPTSDIR/welcome.py -i ../inputs.sh
@@ -36,43 +30,14 @@ eval $cmd
 
 
 demux_artifact=$INTERMEDIATEDIR/"$PROJECTNAME"_raw.qza
+# Add to run parameters
+echo "export demux_artifact=$demux_artifact" > $RUNPARAMETERS
 echo Saved QIIME artifact to: $demux_artifact
 echo
 
 ### 2) Trim primers
 echo TRIMMING PRIMERS
-trim_output=$INTERMEDIATEDIR/"$PROJECTNAME"_trimmed.qza
-if [ $PAIRED == "true" ]
-then
-    trim_setting="trim-paired"
-    front_option="p-front-f"
-    rev_option="p-front-r"
-else
-    trim_setting="trim-single"
-    front_option="p-front"
-    rev_option="p-anywhere"
-fi
-
-cmd="qiime cutadapt $trim_setting \
-    --i-demultiplexed-sequences $demux_artifact \
-    --$front_option $FWD_PRIMER \
-    --$rev_option $REV_PRIMER \
-    --p-error-rate 0.1 \
-    --p-indels True \
-    --p-times 2 \
-    --p-overlap 3 \
-    --p-match-read-wildcards True \
-    --p-match-adapter-wildcards True \
-    --p-minimum-length 50 \
-    --p-cores $(nproc) \
-    --verbose \
-    --o-trimmed-sequences $trim_output"
-echo --------------------------------------------------------------------------------------
-echo $cmd
-echo --------------------------------------------------------------------------------------
-echo
-eval $cmd
-echo
+bash $SCRIPTSDIR/trim.sh $PARAMETERS
 
 ### 3) Join reads
 #if [ $PAIRED == "true" ]
@@ -93,41 +58,11 @@ echo
 
 ### 3) Generate ASVs
 echo GENERATING ASVs
-dada2_output=$INTERMEDIATEDIR/dada2
-dada2_params="--i-demultiplexed-seqs $trim_output \
-    --p-n-threads 0 \
-    --verbose \
-    --output-dir $dada2_output"
-if [ $PAIRED == "true" ]
-then
-    cmd="qiime dada2 denoise-paired --p-trunc-len-f 200 --p-trunc-len-r 200 $dada2_params"
-else
-    cmd="qiime dada2 denoise-single --p-trunc-len 200 $dada2_params"
-fi
-echo --------------------------------------------------------------------------------------
-echo $cmd
-echo --------------------------------------------------------------------------------------
-echo
-eval $cmd
+bash $SCRIPTSDIR/dada2.sh $PARAMETERS
 
 ### 4) Classify
 echo CLASSIFY ASVs
-classification_output=$INTERMEDIATEDIR/"$PROJECTNAME"_SILVA99.qza
-cmd="qiime feature-classifier classify-consensus-vsearch \
---i-query $dada2_output/representative_sequences.qza \
---i-reference-reads $SILVA_SEQUENCES \
---i-reference-taxonomy $SILVA_TAXONOMY \
---p-threads $(nproc) \
---p-top-hits-only True \
---p-perc-identity 0.95 \
---p-maxrejects 100 \
---p-maxaccepts all \
---verbose \
---o-classification $classification_output"
-echo --------------------------------------------------------------------------------------
-echo $cmd
-echo --------------------------------------------------------------------------------------
-eval $cmd
+bash $SCRIPTSDIR/classify.sh $PARAMETERS
 
 ### 5) Export
 echo EXTRACTING PROCESSED DATA
