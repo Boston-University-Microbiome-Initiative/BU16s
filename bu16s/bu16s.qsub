@@ -27,7 +27,7 @@ echo
 eval $cmd
 
 
-demux_artifact=$OUTPUTDIR/artifact.qza
+demux_artifact=$OUTPUTDIR/raw.qza
 echo Saved QIIME artifact to: $demux_artifact
 echo
 
@@ -65,18 +65,34 @@ eval $cmd
 echo
 
 ### 3) Join reads
+#if [ $PAIRED == "true" ]
+#then
+#    echo MERGING PAIRED READS
+#    join_output=$OUTPUTDIR/joined.qza
+#    cmd="qiime vsearch join-pairs \
+#    --i-demultiplexed-seqs $trim_output \
+#    --p-maxdiffs 200 \
+#    --p-maxee 20 \
+#    --p-minovlen 1 \
+#    --p-allowmergestagger True \
+#    --verbose \
+#    --o-joined-sequences $join_output"
+#    echo $cmd
+#    eval $cmd
+#fi
+
+### 3) Generate ASVs
+echo GENERATING ASVs
+dada2_output=$OUTPUTDIR/dada2
+dada2_params="--i-demultiplexed-seqs trimmed.qza \
+    --p-n-threads 0 \
+    -- verbose \
+    --output-dir dada2"
 if [ $PAIRED == "true" ]
 then
-    echo MERGING PAIRED READS
-    join_output=$OUTPUTDIR/joined.qza
-    cmd="qiime vsearch join-pairs \
-    --i-demultiplexed-seqs $trim_output \
-    --p-maxdiffs 200 \
-    --p-maxee 20 \
-    --p-minovlen 1 \
-    --p-allowmergestagger True \
-    --verbose \
-    --o-joined-sequences $join_output"
-    echo $cmd
-    eval $cmd
+    cmd="qiime dada2 denoise-paired --p-trunc-len-f 200 --p-trunc-len-r 200 $dada2_params"
+else
+    cmd="qiime dada2 denoise-single --p-trunc-len 200 $dada2_params"
 fi
+echo $cmd
+eval $cmd

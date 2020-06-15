@@ -98,5 +98,5 @@ if __name__ == '__main__':
     manifest.to_csv(manifest_outfile, '\t', index=False)
 
     """Create artifact"""
-    artifact_outfile = os.path.join(args.o, 'artifact.qza')
+    artifact_outfile = os.path.join(args.o, 'raw.qza')
     create_artifact(manifest_outfile, bool(args.r), artifact_outfile)
