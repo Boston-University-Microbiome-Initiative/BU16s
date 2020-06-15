@@ -27,13 +27,13 @@ echo
 eval $cmd
 
 
-demux_artifact=$OUTPUTDIR/raw.qza
+demux_artifact=$OUTPUTDIR/"$PROJECTNAME"_raw.qza
 echo Saved QIIME artifact to: $demux_artifact
 echo
 
 ### 2) Trim primers
 echo TRIMMING PRIMERS
-trim_output=$OUTPUTDIR/trimmed.qza
+trim_output=$OUTPUTDIR/"$PROJECTNAME"_trimmed.qza
 if [ $PAIRED == "true" ]
 then
     trim_setting="trim-paired"
@@ -87,7 +87,7 @@ dada2_output=$OUTPUTDIR/dada2
 dada2_params="--i-demultiplexed-seqs $trim_output \
     --p-n-threads 0 \
     --verbose \
-    --output-dir $OUTPUTDIR/dada2"
+    --output-dir dada2_output"
 if [ $PAIRED == "true" ]
 then
     cmd="qiime dada2 denoise-paired --p-trunc-len-f 200 --p-trunc-len-r 200 $dada2_params"
@@ -96,3 +96,21 @@ else
 fi
 echo $cmd
 eval $cmd
+
+### 4) Classify
+echo CLASSIFY ASVs
+classification_output=$OUTPUTDIR/"$PROJECTNAME"_SILVA99.qza
+cmd="qiime feature-classifier classify-consensus-vsearch \
+--i-query $dada2_output/representative_sequences.qza \
+--i-reference-reads $SILVA_FASTA \
+--i-reference-taxonomy $SILVA_TAXONOMY \
+--p-threads $(nproc) \
+--p-top-hits-only True \
+--p-perc-identity 0.95 \
+--p-maxrejects 100 \
+--p-maxaccepts all \
+--verbose \
+--o-classification $classification_output"
+echo $cmd
+eval $cmd
+

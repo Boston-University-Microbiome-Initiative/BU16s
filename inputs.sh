@@ -2,6 +2,7 @@
 # THIS MUST BE UPDATED FOR YOUR PROJECT
 
 # I/O **NO TRAILING SLASHES!
+export PROJECTNAME=TEST
 export INPUTDIR=/projectnb/talbot-lab-data/msilver/test_files
 export OUTPUTDIR=/projectnb/talbot-lab-data/msilver/BU16s/test
 
