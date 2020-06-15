@@ -30,6 +30,6 @@ if __name__ == '__main__':
 
     text += '#' * width
 
-    text = ['\t\t'+line for line in text.split('\n')]
+    text = '\n'.join(['\t\t'+line for line in text.split('\n')])
 
     print(text)
