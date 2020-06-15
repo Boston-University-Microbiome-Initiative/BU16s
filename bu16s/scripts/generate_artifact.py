@@ -76,6 +76,7 @@ if __name__ == '__main__':
     """Parse arguments"""
     parser = ArgumentParser(formatter_class=RawTextHelpFormatter, description=__doc__)
     parser.add_argument('-i', help='Input directory', required=True)
+    parser.add_argument('-p', help='Project name')
     parser.add_argument('-f', help='Forward sequence filename extension\n'
                                    '\t*Example: For "file1-r1.fastq.gz", -f = "-r1.fastq.gz"',
                         required=True)
@@ -94,9 +95,9 @@ if __name__ == '__main__':
     # Save
     if not os.path.isdir(args.o):
         os.makedirs(args.o)
-    manifest_outfile = os.path.join(args.o, 'manifest')
+    manifest_outfile = os.path.join(args.o, f'{args.p}_manifest')
     manifest.to_csv(manifest_outfile, '\t', index=False)
 
     """Create artifact"""
-    artifact_outfile = os.path.join(args.o, 'raw.qza')
+    artifact_outfile = os.path.join(args.o, f'{args.p}_raw.qza')
     create_artifact(manifest_outfile, bool(args.r), artifact_outfile)

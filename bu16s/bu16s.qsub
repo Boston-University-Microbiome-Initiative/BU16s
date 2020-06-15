@@ -21,7 +21,7 @@ python $SCRIPTSDIR/welcome.py -i ../inputs.sh
 
 ### 1) CREATE QIIME2 ARTIFACT
 echo CREATING QIIME ARTIFACT
-cmd="python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -f=$FWD_FMT -r=$REV_FMT -o $OUTPUTDIR"
+cmd="python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -p $PROJECTNAME -f=$FWD_FMT -r=$REV_FMT -o $OUTPUTDIR"
 echo $cmd
 echo
 eval $cmd
