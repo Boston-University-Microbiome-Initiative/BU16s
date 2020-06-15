@@ -87,7 +87,7 @@ dada2_output=$OUTPUTDIR/dada2
 dada2_params="--i-demultiplexed-seqs $trim_output \
     --p-n-threads 0 \
     --verbose \
-    --output-dir dada2_output"
+    --output-dir $dada2_output"
 if [ $PAIRED == "true" ]
 then
     cmd="qiime dada2 denoise-paired --p-trunc-len-f 200 --p-trunc-len-r 200 $dada2_params"
@@ -102,7 +102,7 @@ echo CLASSIFY ASVs
 classification_output=$OUTPUTDIR/"$PROJECTNAME"_SILVA99.qza
 cmd="qiime feature-classifier classify-consensus-vsearch \
 --i-query $dada2_output/representative_sequences.qza \
---i-reference-reads $SILVA_FASTA \
+--i-reference-reads $SILVA_SEQUENCES \
 --i-reference-taxonomy $SILVA_TAXONOMY \
 --p-threads $(nproc) \
 --p-top-hits-only True \

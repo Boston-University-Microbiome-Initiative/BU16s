@@ -14,5 +14,5 @@ export REV_PRIMER=GGACTACHVHHHTWTCTAAT
 # PIPELINE PARAMETERS
 # THESE SHOULD ONLY BE CHANGED FOR CHANGES TO CODE
 export SCRIPTSDIR=/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts
-export SILVA_FASTA=/projectnb/talbot-lab-data/msilver/ref_db/SILVA_132_QIIME_release/rep_set/rep_set_16S_only/99/silva_132_99_16S.fna
-export SILVA_TAXONOMY=/projectnb/talbot-lab-data/msilver/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt
+export SILVA_SEQUENCES=/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza
+export SILVA_TAXONOMY=/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza
