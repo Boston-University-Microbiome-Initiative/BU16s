@@ -1,0 +1,12 @@
+# PIPELINE INPUTS
+# THIS MUST BE UPDATED FOR YOUR PROJECT
+export INPUTDIR=test/files/
+export OUTPUTDIR=test/
+
+export FWD_FMT=-r1.fastq.gz
+export REV_FMT=-r2.fastq.gz
+
+
+# PIPELINE PARAMETERS
+# THESE SHOULD ONLY BE CHANGED FOR CHANGES TO OODE
+export SCRIPTSDIR=bu16s/scripts/
