@@ -28,7 +28,7 @@ echo TRIMMING PRIMERS
 trim_output=$OUTPUTDIR/trimmed.qza
 if [ "$PAIRED" == "true" ]
 then
-    trim_setting="trimmed-paired"
+    trim_setting="trim-paired"
     front_option="p-front-f"
     rev_option="p-front-r"
 else
