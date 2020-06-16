@@ -1,4 +1,7 @@
 #!/bin/bash -l
+# USAGE:
+# Submit to SCC: qsub bu16s.qsub PATH/TO/PARAMETERFILE
+# Local run: bash bu16s.qsub PATH/TO/PARAMETERFILE
 
 #$ -P talbot-lab-data
 #$ -j y
@@ -8,7 +11,16 @@ module load miniconda
 conda activate qiime2-2020.2
 
 # Load parameters
-PARAMETERS=$1
+usage="# USAGE:
+# Submit to SCC: qsub bu16s.qsub PATH/TO/PARAMETERFILE
+# Local run: bash bu16s.qsub PATH/TO/PARAMETERFILE"
+if test -f $1
+then
+    PARAMETERS=$1
+else
+    echo $usage
+fi
+
 source $PARAMETERS
 # Make run parameters file
 touch $RUNPARAMETERS
