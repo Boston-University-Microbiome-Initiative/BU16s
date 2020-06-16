@@ -23,8 +23,6 @@ else
 fi
 
 source $PARAMETERS
-# Make run parameters file
-touch $RUNPARAMETERS
 
 # Show welcome
 python $SCRIPTSDIR/welcome.py -i ../inputs.sh
