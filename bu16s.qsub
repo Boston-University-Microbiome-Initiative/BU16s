@@ -26,7 +26,7 @@ fi
 source $PARAMETERS
 
 # Show welcome
-python $SCRIPTSDIR/welcome.py -i ../inputs.sh
+python $SCRIPTSDIR/welcome.py -i $PARAMETERS
 echo
 echo STARTING AT $(date)
 echo
