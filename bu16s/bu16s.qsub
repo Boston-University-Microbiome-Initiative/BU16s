@@ -14,7 +14,7 @@ conda activate qiime2-2020.2
 usage="# USAGE:
 # Submit to SCC: qsub bu16s.qsub PATH/TO/PARAMETERFILE
 # Local run: bash bu16s.qsub PATH/TO/PARAMETERFILE"
-if test -f $1
+if test -f $1 && ! [ -z $1 ]
 then
     PARAMETERS=$1
 else
