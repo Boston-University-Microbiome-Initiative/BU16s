@@ -1,4 +1,7 @@
 #!/bin/bash -l
+# USAGE:
+# Submit to SCC: qsub bu16s.qsub PATH/TO/PARAMETERFILE
+# Local run: bash bu16s.qsub PATH/TO/PARAMETERFILE
 
 #$ -P talbot-lab-data
 #$ -j y
@@ -6,18 +9,20 @@
 # Load modules and inputs
 module load miniconda
 conda activate qiime2-2020.2
-source ../inputs.sh
 
-# Single end if only FWD
-if [ -z "$REV_FMT" ]
+# Load parameters
+usage="# USAGE:\n
+# Submit to SCC: qsub bu16s.qsub PATH/TO/PARAMETERFILE\n
+# Local run: bash bu16s.qsub PATH/TO/PARAMETERFILE\n"
+if test -f $1 && ! [ -z $1 ]
 then
-    PAIRED=false
+    PARAMETERS=$1
 else
-    PAIRED=true
+    echo -e $usage
+    exit
 fi
 
-# Output file locations
-INTERMEDIATEDIR=$OUTPUTDIR/intermediate
+source $PARAMETERS
 
 # Show welcome
 python $SCRIPTSDIR/welcome.py -i ../inputs.sh
@@ -36,101 +41,26 @@ eval $cmd
 
 
 demux_artifact=$INTERMEDIATEDIR/"$PROJECTNAME"_raw.qza
+# Add to run parameters
+echo "export demux_artifact=$demux_artifact" > $RUNPARAMETERS
 echo Saved QIIME artifact to: $demux_artifact
 echo
 
 ### 2) Trim primers
 echo TRIMMING PRIMERS
-trim_output=$INTERMEDIATEDIR/"$PROJECTNAME"_trimmed.qza
-if [ $PAIRED == "true" ]
-then
-    trim_setting="trim-paired"
-    front_option="p-front-f"
-    rev_option="p-front-r"
-else
-    trim_setting="trim-single"
-    front_option="p-front"
-    rev_option="p-anywhere"
-fi
-
-cmd="qiime cutadapt $trim_setting \
-    --i-demultiplexed-sequences $demux_artifact \
-    --$front_option $FWD_PRIMER \
-    --$rev_option $REV_PRIMER \
-    --p-error-rate 0.1 \
-    --p-indels True \
-    --p-times 2 \
-    --p-overlap 3 \
-    --p-match-read-wildcards True \
-    --p-match-adapter-wildcards True \
-    --p-minimum-length 50 \
-    --p-cores $(nproc) \
-    --verbose \
-    --o-trimmed-sequences $trim_output"
-echo --------------------------------------------------------------------------------------
-echo $cmd
-echo --------------------------------------------------------------------------------------
-echo
-eval $cmd
-echo
-
-### 3) Join reads
-#if [ $PAIRED == "true" ]
-#then
-#    echo MERGING PAIRED READS
-#    join_output=$OUTPUTDIR/joined.qza
-#    cmd="qiime vsearch join-pairs \
-#    --i-demultiplexed-seqs $trim_output \
-#    --p-maxdiffs 200 \
-#    --p-maxee 20 \
-#    --p-minovlen 1 \
-#    --p-allowmergestagger True \
-#    --verbose \
-#    --o-joined-sequences $join_output"
-#    echo $cmd
-#    eval $cmd
-#fi
+bash $SCRIPTSDIR/trim.sh $PARAMETERS
 
 ### 3) Generate ASVs
 echo GENERATING ASVs
-dada2_output=$INTERMEDIATEDIR/dada2
-dada2_params="--i-demultiplexed-seqs $trim_output \
-    --p-n-threads 0 \
-    --verbose \
-    --output-dir $dada2_output"
-if [ $PAIRED == "true" ]
-then
-    cmd="qiime dada2 denoise-paired --p-trunc-len-f 200 --p-trunc-len-r 200 $dada2_params"
-else
-    cmd="qiime dada2 denoise-single --p-trunc-len 200 $dada2_params"
-fi
-echo --------------------------------------------------------------------------------------
-echo $cmd
-echo --------------------------------------------------------------------------------------
-echo
-eval $cmd
+bash $SCRIPTSDIR/dada2.sh $PARAMETERS
 
 ### 4) Classify
 echo CLASSIFY ASVs
-classification_output=$INTERMEDIATEDIR/"$PROJECTNAME"_SILVA99.qza
-cmd="qiime feature-classifier classify-consensus-vsearch \
---i-query $dada2_output/representative_sequences.qza \
---i-reference-reads $SILVA_SEQUENCES \
---i-reference-taxonomy $SILVA_TAXONOMY \
---p-threads $(nproc) \
---p-top-hits-only True \
---p-perc-identity 0.95 \
---p-maxrejects 100 \
---p-maxaccepts all \
---verbose \
---o-classification $classification_output"
-echo --------------------------------------------------------------------------------------
-echo $cmd
-echo --------------------------------------------------------------------------------------
-eval $cmd
+bash $SCRIPTSDIR/classify.sh $PARAMETERS
 
 ### 5) Export
 echo EXTRACTING PROCESSED DATA
+source $RUNPARAMETERS
 # Extract ASV table
 qiime tools export --input-path $dada2_output/table.qza --output-path $OUTPUTDIR
 mv $OUTPUTDIR/feature-table.biom $OUTPUTDIR/"$PROJECTNAME"_ASV.biom

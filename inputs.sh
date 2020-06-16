@@ -11,8 +11,23 @@ export REV_FMT=_2.fastq.gz
 
 export FWD_PRIMER=GTGCCAGCMGCCGCGGTAA
 export REV_PRIMER=GGACTACHVHHHTWTCTAAT
+
 # PIPELINE PARAMETERS
 # THESE SHOULD ONLY BE CHANGED FOR CHANGES TO CODE
 export SCRIPTSDIR=/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts
 export SILVA_SEQUENCES=/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza
 export SILVA_TAXONOMY=/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza
+
+# Single end if only FWD
+if [ -z "$REV_FMT" ]
+then
+    PAIRED=false
+else
+    PAIRED=true
+fi
+
+export PAIRED
+
+# Output file locations
+export INTERMEDIATEDIR=$OUTPUTDIR/intermediate
+export RUNPARAMETERS=$OUTPUTDIR/.runparams
