@@ -12,7 +12,7 @@ cmd="qiime feature-classifier classify-consensus-vsearch \
 --i-query $dada2_output/representative_sequences.qza \
 --i-reference-reads $SILVA_SEQUENCES \
 --i-reference-taxonomy $SILVA_TAXONOMY \
---p-threads $(nproc) \
+--p-threads $(nproc --all) \
 --p-top-hits-only True \
 --p-perc-identity 0.95 \
 --p-maxrejects 100 \

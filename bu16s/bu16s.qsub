@@ -5,6 +5,7 @@
 
 #$ -P talbot-lab-data
 #$ -j y
+#$ -pe omp 16
 
 # Load modules and inputs
 module load miniconda
