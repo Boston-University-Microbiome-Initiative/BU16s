@@ -6,7 +6,7 @@
 ```bash
 bash download_test.sh
 ```
-2. Create input parameters file
+2. Create input parameters file. This command will create one at `TEST_inputs.sh`
 ```bash
 python create_inputs.py \
 --input_dir test_files \
@@ -22,9 +22,8 @@ This is only recommended for this tutorial since there are only two small files
 bash bu16s.qsub TEST_inputs.sh
 ```
 
-Normally, you will submit as a batch job where the pipeline will run on another computer with more processors.
+Normally, you will submit as a batch job where the pipeline will run on another computer on the SCC with more processors.
 
-Once your project is correct, you can submit the batch job with `qsub`
 ```bash
 qsub bu16s.qsub -P <BU PROJECT NAME> TEST_inputs.sh
 ```

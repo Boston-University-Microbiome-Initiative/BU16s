@@ -53,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="527">
-                <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+              <first_editor relative-caret-position="446">
+                <caret line="24" column="100" lean-forward="false" selection-start-line="24" selection-start-column="100" selection-end-line="24" selection-end-column="100" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -537,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592322862389</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="submit BU project name manually">
+      <created>1592327984927</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1592327984927</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -597,7 +604,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="full path to trim" />
     <MESSAGE value="dada2 to outputdir" />
     <MESSAGE value="map taxa" />
     <MESSAGE value="project name to manifest script" />
@@ -622,7 +628,8 @@
     <MESSAGE value="all processors for cutadapt" />
     <MESSAGE value="project renaming instructions" />
     <MESSAGE value="rm .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="rm .idea" />
+    <MESSAGE value="submit BU project name manually" />
+    <option name="LAST_COMMIT_MESSAGE" value="submit BU project name manually" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -840,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -892,11 +891,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="527">
-            <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <first_editor relative-caret-position="446">
+            <caret line="24" column="100" lean-forward="false" selection-start-line="24" selection-start-column="100" selection-end-line="24" selection-end-column="100" />
             <folding />
           </first_editor>
           <second_editor />
