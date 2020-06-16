@@ -19,7 +19,10 @@ if __name__ == '__main__':
     parser.add_argument('--input_dir', help='Full path to directory containing FASTQ files', required=True)
     parser.add_argument('--output_dir', help='Full path to desired output directory', required=True)
     parser.add_argument('--fwd', help='Forward read filename extension\n'
-                                      '\tEx. sample1_1.fastq.gz => --fwd _1.fastq.gz', required=True)
+                                      '\tEx. sample1_1.fastq.gz\n'
+                                      '\t\t--fwd _1.fastq.gz\n'
+                                      '\tIf extension starts with a "-", like sample1-r1.fastq.gz\n'
+                                      '\t\t --fwd="-r1.fastq.gz"', required=True)
     parser.add_argument('--rev', help='Reverse read filename extension\n'
                                       '\tLEAVE BLANK FOR SINGLE END')
     parser.add_argument('--fprimer', help='Forward primer. Default is 515F:\n'
@@ -55,6 +58,21 @@ if __name__ == '__main__':
     paired = bool(args.rev)
 
     """Collect arguments"""
+    param_order = ['PROJECTNAME',
+                   'INPUTDIR',
+                   'OUTPUTDIR',
+                   'INTERMEDIATEDIR',
+                   'RUNPARAMETERS',
+                   'FWD_FMT',
+                   'REV_FMT',
+                   'FWD_PRIMER',
+                   'REV_PRIMER',
+                   'DADA2_TRUNC_LEN',
+                   'PAIRED',
+                   'SCRIPTSDIR',
+                   'SILVA_SEQUENCES',
+                   'SILVA_TAXONOMY']
+
     parameters = {'PROJECTNAME': args.project,
                   'INPUTDIR': indir,
                   'OUTPUTDIR': outdir,
@@ -74,7 +92,7 @@ if __name__ == '__main__':
     parameters.update(defaults)
 
     """Create parameter file"""
-    exports = '\n'.join(['export %s=%s' % (k, v) for k, v in parameters.items()])
+    exports = '\n'.join(['export %s=%s' % (k, parameters[k]) for k in param_order])
     with open(outpath, 'w') as fh:
         fh.write(exports)
     print('Saved input parameters file to: %s' % outpath)
