@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s.qsub" afterPath="$PROJECT_DIR$/bu16s.qsub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/scripts/trim.sh" afterPath="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="135">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,8 +66,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="459">
-                <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <first_editor relative-caret-position="656">
+                <caret line="27" column="3" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -74,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trim.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="trim.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="398">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -96,10 +97,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>paired</find>
+      <find>nproc</find>
     </findStrings>
     <dirStrings>
-      <dir>C:\Users\Michael\Documents\Boston_University\BU16s\bu16s</dir>
       <dir>C:\Users\Michael\Documents\Boston_University\BU16s</dir>
+      <dir>C:\Users\Michael\Documents\Boston_University\BU16s\bu16s</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -118,7 +120,6 @@
         <option value="$PROJECT_DIR$/bu16s/bu16s.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
-        <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
         <option value="$PROJECT_DIR$/bu16s/scripts/classify.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -127,9 +128,10 @@
         <option value="$PROJECT_DIR$/inputs.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/create_inputs.py" />
         <option value="$PROJECT_DIR$/download_test.sh" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/create_inputs.py" />
         <option value="$PROJECT_DIR$/bu16s.qsub" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
       </list>
     </option>
   </component>
@@ -521,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592321093713</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="variable input location for welcome">
+      <created>1592321391332</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1592321391332</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -538,6 +547,7 @@
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -547,7 +557,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -581,7 +590,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="64-&gt;33?" />
     <MESSAGE value="join pairs" />
     <MESSAGE value="dada2" />
     <MESSAGE value="remove extra space" />
@@ -606,7 +614,8 @@
     <MESSAGE value="move create_inputs.py" />
     <MESSAGE value="download to test_files" />
     <MESSAGE value="order outputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="order outputs" />
+    <MESSAGE value="variable input location for welcome" />
+    <option name="LAST_COMMIT_MESSAGE" value="variable input location for welcome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -667,6 +676,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,6 +684,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,6 +746,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -742,6 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -809,6 +822,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -816,6 +830,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -830,25 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="459">
-            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -872,8 +868,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bu16s.qsub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state relative-caret-position="135">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="656">
+            <caret line="27" column="3" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>

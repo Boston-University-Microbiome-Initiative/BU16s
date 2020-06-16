@@ -30,7 +30,7 @@ cmd="qiime cutadapt $trim_setting \
     --p-match-read-wildcards True \
     --p-match-adapter-wildcards True \
     --p-minimum-length 50 \
-    --p-cores $(nproc) \
+    --p-cores $(nproc --all) \
     --verbose \
     --o-trimmed-sequences $trim_output"
 echo --------------------------------------------------------------------------------------
