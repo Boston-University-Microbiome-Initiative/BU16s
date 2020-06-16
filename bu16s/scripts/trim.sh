@@ -8,7 +8,7 @@ source $PARAMETERS
 source $RUNPARAMETERS
 
 trim_output=$INTERMEDIATEDIR/"$PROJECTNAME"_trimmed.qza
-if [ $PAIRED == "true" ]
+if [ $PAIRED == "True" ]
 then
     trim_setting="trim-paired"
     front_option="p-front-f"
