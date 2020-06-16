@@ -18,7 +18,7 @@ if test -f $1 && ! [ -z $1 ]
 then
     PARAMETERS=$1
 else
-    printf $usage
+    echo -e $usage
     exit
 fi
 
