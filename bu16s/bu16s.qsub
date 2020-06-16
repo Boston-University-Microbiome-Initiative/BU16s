@@ -52,23 +52,6 @@ echo
 echo TRIMMING PRIMERS
 bash $SCRIPTSDIR/trim.sh $PARAMETERS
 
-### 3) Join reads
-#if [ $PAIRED == "true" ]
-#then
-#    echo MERGING PAIRED READS
-#    join_output=$OUTPUTDIR/joined.qza
-#    cmd="qiime vsearch join-pairs \
-#    --i-demultiplexed-seqs $trim_output \
-#    --p-maxdiffs 200 \
-#    --p-maxee 20 \
-#    --p-minovlen 1 \
-#    --p-allowmergestagger True \
-#    --verbose \
-#    --o-joined-sequences $join_output"
-#    echo $cmd
-#    eval $cmd
-#fi
-
 ### 3) Generate ASVs
 echo GENERATING ASVs
 bash $SCRIPTSDIR/dada2.sh $PARAMETERS
@@ -79,6 +62,7 @@ bash $SCRIPTSDIR/classify.sh $PARAMETERS
 
 ### 5) Export
 echo EXTRACTING PROCESSED DATA
+source $RUNPARAMETERS
 # Extract ASV table
 qiime tools export --input-path $dada2_output/table.qza --output-path $OUTPUTDIR
 mv $OUTPUTDIR/feature-table.biom $OUTPUTDIR/"$PROJECTNAME"_ASV.biom
