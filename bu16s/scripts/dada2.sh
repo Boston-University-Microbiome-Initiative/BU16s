@@ -8,6 +8,11 @@ source $PARAMETERS
 source $RUNPARAMETERS
 
 dada2_output=$INTERMEDIATEDIR/dada2
+# Delete directoy if already exists
+if [ -d $dada2_output ]
+then
+    rm -rf $dada2_output
+fi
 dada2_params="--i-demultiplexed-seqs $trim_output \
     --p-n-threads 0 \
     --verbose \
