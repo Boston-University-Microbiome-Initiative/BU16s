@@ -87,7 +87,8 @@ if __name__ == '__main__':
     # Hard coded parameters
     defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts',
                 'SILVA_SEQUENCES' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza',
-                'SILVA_TAXONOMY' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza'}
+                'SILVA_TAXONOMY' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza',
+                'CONDA_ENV' : '/projectnb/talbot-lab-data/msilver/.conda/envs/qiime2-2020.2'}
     # Add defaults to user-define
     parameters.update(defaults)
 

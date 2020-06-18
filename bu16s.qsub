@@ -7,9 +7,6 @@
 #$ -j y
 #$ -pe omp 16
 
-# Load modules and inputs
-module load miniconda
-conda activate qiime2-2020.2
 
 # Load parameters
 usage="# USAGE:\n
@@ -24,6 +21,13 @@ else
 fi
 
 source $PARAMETERS
+
+# Load modules and inputs
+module load miniconda
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+conda activate $CONDA_ENV
+
 
 # Show welcome
 python $SCRIPTSDIR/welcome.py -i $PARAMETERS
