@@ -71,7 +71,8 @@ if __name__ == '__main__':
                    'PAIRED',
                    'SCRIPTSDIR',
                    'SILVA_SEQUENCES',
-                   'SILVA_TAXONOMY']
+                   'SILVA_TAXONOMY',
+                   'CONDA_ENV']
 
     parameters = {'PROJECTNAME': args.project,
                   'INPUTDIR': indir,
