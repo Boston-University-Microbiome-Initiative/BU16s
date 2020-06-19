@@ -2,6 +2,7 @@
 Generate welcome message
 """
 from argparse import ArgumentParser
+import os
 def center(s, l, delim='#'):
     """Center a text s at a length l"""
     start = int(l/2 - len(s)/2)
@@ -21,7 +22,10 @@ if __name__ == '__main__':
 # - Michael Silverstein: msilver4@bu.edu            #
 """
     width = len(text.split('\n')[0])
-    text += '#' + center('PARAMETERS', width, ' ')[1:-1] + '#\n'
+    # Add user name
+    user = os.environ['USER']
+    text += '#' + center('RUN BY: %s' % user, width, ' ')[1: -1] + '#\n'
+    text += '#' + center('PARAMETERS', width, ' ')[1: -1] + '#\n'
 
     # Get parameters
     params = [l.rstrip().split('export ')[1] for l in open(args.i) if l.startswith('export')]
