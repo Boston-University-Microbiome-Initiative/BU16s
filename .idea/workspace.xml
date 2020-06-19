@@ -44,8 +44,8 @@
       <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="70" column="52" lean-forward="true" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+            <state relative-caret-position="404">
+              <caret line="72" column="92" lean-forward="false" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -280,13 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00003" summary="no trailing slashes">
-      <created>1592239962813</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1592239962813</updated>
     </task>
     <task id="LOCAL-00004" summary="full paths">
       <created>1592240705985</created>
@@ -624,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592571101464</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="convert biom to tsv">
+      <created>1592572380886</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1592572380887</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -684,7 +684,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="intermediate dir" />
     <MESSAGE value="test scripts" />
     <MESSAGE value="check for input" />
     <MESSAGE value="not empty and exists" />
@@ -709,7 +708,8 @@
     <MESSAGE value="use my qiime" />
     <MESSAGE value="purge modules; add username" />
     <MESSAGE value="provide python command in parameter file" />
-    <option name="LAST_COMMIT_MESSAGE" value="provide python command in parameter file" />
+    <MESSAGE value="convert biom to tsv" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert biom to tsv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1116,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bu16s.qsub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="70" column="52" lean-forward="true" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+        <state relative-caret-position="404">
+          <caret line="72" column="92" lean-forward="false" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="92" />
           <folding />
         </state>
       </provider>
