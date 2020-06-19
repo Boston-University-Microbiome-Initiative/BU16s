@@ -24,6 +24,9 @@ python $BU16s/create_inputs.py \
 --fwd _1.fastq.gz \
 --rev _2.fastq.gz
 ```
+
+If you view `TEST_inputs.sh`, you will see the above python command (commented out) along with your input parameters.
+
 3. Submit job
 You can run the pipeline locally in order to observe each step
 This is only recommended for this tutorial since there are only two small files

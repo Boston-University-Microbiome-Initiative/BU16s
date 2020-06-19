@@ -11,7 +11,7 @@ Author: msilver4@bu.edu
 """
 
 from argparse import ArgumentParser, RawTextHelpFormatter
-import os
+import os, sys
 
 if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=RawTextHelpFormatter, description=__doc__)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     """I/O"""
     indir = os.path.abspath(args.input_dir)
     if not os.path.isdir(indir):
-        raise FileNotFoundError('Input directory %s does not exist' % indir)
+        raise IOError('Input directory %s does not exist' % indir)
     outdir = os.path.abspath(args.output_dir)
     if not os.path.exists(outdir):
         os.makedirs(outdir)
@@ -94,7 +94,10 @@ if __name__ == '__main__':
     parameters.update(defaults)
 
     """Create parameter file"""
-    exports = '\n'.join(['export %s=%s' % (k, parameters[k]) for k in param_order])
+    # Add command as comment
+    command = '# python ' + ' '.join(sys.argv) + '\n'
+    exports = '\n'.join(['export %s=%s' % (k, parameters[k]) for k in param_order]) + '\n'
+    output = command + exports
     with open(outpath, 'w') as fh:
-        fh.write(exports)
+        fh.write(output)
     print('Saved input parameters file to: %s' % outpath)
