@@ -25,7 +25,11 @@ python $BU16s/create_inputs.py \
 --rev _2.fastq.gz
 ```
 
+*Note: the `\`s are for visibility of code and are not required to execute the command.*
+
 If you view `TEST_inputs.sh`, you will see the above python command (commented out) along with your input parameters.
+
+You can view the documentation for this script with `python $BU16s/create_inputs.py -h`
 
 3. Submit job
 
@@ -38,6 +42,8 @@ bash $BU16s/bu16s.qsub TEST_inputs.sh
 Normally, you will submit as a batch job where the pipeline will run on another computer on the SCC with more processors.
 
 ```bash
-qsub $BU16s/bu16s.qsub -P <BU PROJECT NAME> TEST_inputs.sh
+qsub -P <BU PROJECT NAME> $BU16s/bu16s.qsub TEST_inputs.sh
 ```
 You can monitor the progress of your job with `qstat -u <BU username>` and by viewing the output log with `less bu16s.qsub.o<JOB ID>`
+
+Also, while not required, you can name your job, and subsequently your job logs, with `qsub -N <Job name> ...`.
