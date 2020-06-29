@@ -11,11 +11,11 @@ source ~/.bashrc
 ```
 
 # Tutorial
-1. Download test data (two small FASTQ files) to `test_files`
+## 1. Download test data (two small FASTQ files) to `test_files`
 ```bash
 bash $BU16s/download_test.sh
 ```
-2. Create input parameters file. This command will create one at `TEST_inputs.sh`
+## 2. Create input parameters file. This command will create one at `TEST_inputs.sh`
 ```bash
 python $BU16s/create_inputs.py \
 --input_dir test_files \
@@ -33,7 +33,7 @@ If you view [`TEST_inputs.sh`](TEST_inputs.sh), you will see the above python co
 
 You can view the documentation for this script with `python $BU16s/create_inputs.py -h`
 
-3. Submit job
+## 3. Submit job
 ### Local
 You can run the pipeline locally in order to observe each step. This is only recommended for this tutorial since there are only two small files.
 ```bash

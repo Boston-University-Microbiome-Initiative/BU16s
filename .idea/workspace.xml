@@ -55,8 +55,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="500">
-                <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <first_editor relative-caret-position="176">
+                <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -269,13 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00011" summary="correct primers">
-      <created>1592249438375</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1592249438375</updated>
     </task>
     <task id="LOCAL-00012" summary="correct primers">
       <created>1592249600728</created>
@@ -613,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593459780639</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="readme formatting">
+      <created>1593460543245</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1593460543245</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -688,7 +688,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="run params for export" />
     <MESSAGE value="16 cores" />
     <MESSAGE value="rm dada2 dir if exists" />
     <MESSAGE value="var for dada2 trunc len" />
@@ -713,7 +712,8 @@
     <MESSAGE value="dada2 trunc both reads" />
     <MESSAGE value="change test files" />
     <MESSAGE value="just manually specify primers from paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="just manually specify primers from paper" />
+    <MESSAGE value="readme formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1118,8 +1118,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="500">
-            <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <first_editor relative-caret-position="176">
+            <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
