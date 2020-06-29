@@ -28,7 +28,9 @@ if __name__ == '__main__':
     parser.add_argument('--fprimer', help='Forward primer. Default is 515F:\n'
                                           '\tGTGCCAGCMGCCGCGGTAA', default='GTGCCAGCMGCCGCGGTAA')
     parser.add_argument('--rprimer', help='Reverse primer. Default is 806R:\n'
-                                          '\tGGACTACHVHHHTWTCTAAT', default='GGACTACHVHHHTWTCTAAT')
+                                          '\tGGACTACHVHHHTWTCTAAT\n'
+                                          '\tInclude in single end mode to search for reverse primer in reads',
+                                            default='GGACTACHVHHHTWTCTAAT')
     parser.add_argument('--trunclen_f', help='Length to truncate forward reads to for DADA2.\n'
                                            '\tDeafult is no truncation', default=0)
     parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'

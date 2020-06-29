@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" afterPath="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_inputs.py" afterPath="$PROJECT_DIR$/create_inputs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="690">
-              <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+              <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
               <folding>
                 <element signature="e#152#209#0" expanded="true" />
               </folding>
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_inputs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="648">
+              <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
                 <element signature="e#283#340#0" expanded="true" />
               </folding>
@@ -50,6 +50,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trim.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="891">
+              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,8 +110,8 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/dada2.sh" />
         <option value="$PROJECT_DIR$/download_test.sh" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/create_inputs.py" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
+        <option value="$PROJECT_DIR$/create_inputs.py" />
       </list>
     </option>
   </component>
@@ -219,13 +229,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00016" summary="remove extra space">
-      <created>1592253356120</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1592253356120</updated>
     </task>
     <task id="LOCAL-00017" summary="remove extra space">
       <created>1592253426388</created>
@@ -563,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593467264351</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="path -&gt; filepath">
+      <created>1593467410299</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1593467410299</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +648,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rm dada2 dir if exists" />
     <MESSAGE value="var for dada2 trunc len" />
     <MESSAGE value="script for generating inputs" />
     <MESSAGE value="move create_inputs.py" />
@@ -663,7 +672,8 @@
     <MESSAGE value="just manually specify primers from paper" />
     <MESSAGE value="readme formatting" />
     <MESSAGE value="interpret 'None' as None" />
-    <option name="LAST_COMMIT_MESSAGE" value="interpret 'None' as None" />
+    <MESSAGE value="path -&gt; filepath" />
+    <option name="LAST_COMMIT_MESSAGE" value="path -&gt; filepath" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1037,24 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_inputs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
-          <folding>
-            <element signature="e#283#340#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1069,9 +1061,27 @@
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
-          <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
           <folding>
             <element signature="e#152#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bu16s/scripts/trim.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_inputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+          <folding>
+            <element signature="e#283#340#0" expanded="true" />
           </folding>
         </state>
       </provider>
