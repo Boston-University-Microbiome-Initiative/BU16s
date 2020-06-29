@@ -87,6 +87,8 @@ if __name__ == '__main__':
                                    '\t*Keep projects in separate directories to avoid overwritting')
 
     args = parser.parse_args()
+    if args.r == 'None':
+        args.r = None
 
     """Generate manifest file"""
     # Create table
