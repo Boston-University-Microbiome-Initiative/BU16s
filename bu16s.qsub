@@ -22,14 +22,6 @@ fi
 
 source $PARAMETERS
 
-# Load modules and inputs
-module purge
-module load miniconda
-export LC_ALL=en_US.utf-8
-export LANG=en_US.utf-8
-conda activate $CONDA_ENV
-
-
 # Show welcome
 python $SCRIPTSDIR/welcome.py -i $PARAMETERS
 echo
