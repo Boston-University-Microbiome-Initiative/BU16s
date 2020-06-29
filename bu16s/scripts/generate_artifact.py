@@ -31,7 +31,7 @@ def gen_manifest(input_dir, fwd_fmt, rev_fmt):
     col_order = ['sample-id']
 
     ### Get r1
-    fwd_col_name = 'forward-absolute-filepath' if rev_fmt else 'absolute-path'
+    fwd_col_name = 'forward-absolute-filepath' if rev_fmt else 'absolute-filepath'
     col_order.append(fwd_col_name)
 
     fwd_paths = pd.Series(all_fwd).rename(fwd_col_name)

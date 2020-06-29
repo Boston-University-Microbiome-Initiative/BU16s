@@ -20,8 +20,8 @@
       <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="90" column="21" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+            <state relative-caret-position="690">
+              <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
               <folding>
                 <element signature="e#152#209#0" expanded="true" />
               </folding>
@@ -219,13 +219,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00015" summary="dada2">
-      <created>1592253187453</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1592253187453</updated>
     </task>
     <task id="LOCAL-00016" summary="remove extra space">
       <created>1592253356120</created>
@@ -563,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593460741463</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="interpret 'None' as None">
+      <created>1593467264351</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1593467264351</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +638,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="16 cores" />
     <MESSAGE value="rm dada2 dir if exists" />
     <MESSAGE value="var for dada2 trunc len" />
     <MESSAGE value="script for generating inputs" />
@@ -663,7 +662,8 @@
     <MESSAGE value="change test files" />
     <MESSAGE value="just manually specify primers from paper" />
     <MESSAGE value="readme formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme formatting" />
+    <MESSAGE value="interpret 'None' as None" />
+    <option name="LAST_COMMIT_MESSAGE" value="interpret 'None' as None" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1068,8 +1068,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="90" column="21" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        <state relative-caret-position="690">
+          <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
           <folding>
             <element signature="e#152#209#0" expanded="true" />
           </folding>
