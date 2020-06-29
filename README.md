@@ -11,7 +11,8 @@ source ~/.bashrc
 ```
 
 # Tutorial
-## 1. Download test data (two small FASTQ files) to `test_files`
+## 1. Download test data 
+Run the following command to download two small FASTQ files to `test_files/`
 ```bash
 bash $BU16s/download_test.sh
 ```
