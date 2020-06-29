@@ -34,13 +34,12 @@ If you view [`TEST_inputs.sh`](TEST_inputs.sh), you will see the above python co
 You can view the documentation for this script with `python $BU16s/create_inputs.py -h`
 
 3. Submit job
-
-You can run the pipeline locally in order to observe each step
-This is only recommended for this tutorial since there are only two small files
+### Local
+You can run the pipeline locally in order to observe each step. This is only recommended for this tutorial since there are only two small files.
 ```bash
 bash $BU16s/bu16s.qsub TEST_inputs.sh
 ```
-
+### SCC Batch Job
 Normally, you will submit as a batch job where the pipeline will run on another computer on the SCC with more processors.
 
 ```bash
