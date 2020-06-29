@@ -15,7 +15,8 @@ source ~/.bashrc
 ```bash
 bash $BU16s/download_test.sh
 ```
-## 2. Create input parameters file. This command will create one at `TEST_inputs.sh`
+## 2. Create input parameters file. 
+The following command will generate a parameters file at `TEST_inputs.sh`. This file is used to submit a 16s pipeline job.
 ```bash
 python $BU16s/create_inputs.py \
 --input_dir test_files \
