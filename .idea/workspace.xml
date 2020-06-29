@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download_test.sh" afterPath="$PROJECT_DIR$/download_test.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +33,7 @@
       <file leaf-file-name="create_inputs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="-93">
               <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="65" />
               <folding>
                 <element signature="e#283#340#0" expanded="true" />
@@ -41,22 +42,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download_test.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="download_test.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/download_test.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
-              <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="702">
-                <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <first_editor relative-caret-position="432">
+                <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -144,7 +145,6 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/create_inputs.py" />
         <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/bu16s/scripts/quality_viz.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/trim.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/classify.sh" />
@@ -152,6 +152,7 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/dada2.sh" />
         <option value="$PROJECT_DIR$/create_inputs.py" />
         <option value="$PROJECT_DIR$/download_test.sh" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -269,13 +270,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00009" summary="echo commands">
-      <created>1592247393291</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1592247393291</updated>
     </task>
     <task id="LOCAL-00010" summary="echo commands">
       <created>1592247983860</created>
@@ -613,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593447779931</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="change test files">
+      <created>1593459352690</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1593459352690</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -688,7 +689,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="exit if fail" />
     <MESSAGE value="fix echo" />
     <MESSAGE value="run params for export" />
     <MESSAGE value="16 cores" />
@@ -713,7 +713,8 @@
     <MESSAGE value="missing space" />
     <MESSAGE value="add loads" />
     <MESSAGE value="dada2 trunc both reads" />
-    <option name="LAST_COMMIT_MESSAGE" value="dada2 trunc both reads" />
+    <MESSAGE value="change test files" />
+    <option name="LAST_COMMIT_MESSAGE" value="change test files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1089,17 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="702">
-            <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/dada2.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1108,9 +1098,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/download_test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
+        <state relative-caret-position="-93">
           <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="65" />
           <folding>
             <element signature="e#283#340#0" expanded="true" />
@@ -1118,11 +1116,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download_test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="432">
+            <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

@@ -22,12 +22,14 @@ python $BU16s/create_inputs.py \
 --output_dir test \
 --project TEST \
 --fwd _1.fastq.gz \
---rev _2.fastq.gz
+--rev _2.fastq.gz \
+--fprimer ACACTGACGACATGGTTCTACAGTGCCAGCMGCCGCGGTAA \
+--rprimer TACGGTAGCAGAGACTTGGTCTGGACTACHVGGGTWTCTAAT
 ```
 
 *Note: the `\`s are for visibility of code and are not required to execute the command.*
 
-If you view `TEST_inputs.sh`, you will see the above python command (commented out) along with your input parameters.
+If you view [`TEST_inputs.sh`](TEST_inputs.sh), you will see the above python command (commented out) along with your input parameters.
 
 You can view the documentation for this script with `python $BU16s/create_inputs.py -h`
 
