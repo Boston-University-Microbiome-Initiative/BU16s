@@ -97,7 +97,13 @@ if __name__ == '__main__':
     # Add command as comment
     command = '# python ' + ' '.join(sys.argv) + '\n'
     exports = '\n'.join(['export %s=%s' % (k, parameters[k]) for k in param_order]) + '\n'
-    output = command + exports
+    GLOBAL_LOADS = """# Load modules and inputs
+module purge
+module load miniconda
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+conda activate $CONDA_ENV"""
+    output = command + exports + GLOBAL_LOADS
     with open(outpath, 'w') as fh:
         fh.write(output)
     print('Saved input parameters file to: %s' % outpath)

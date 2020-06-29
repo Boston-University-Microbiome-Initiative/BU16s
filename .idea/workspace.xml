@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bu16s.qsub" afterPath="$PROJECT_DIR$/bu16s.qsub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_inputs.py" afterPath="$PROJECT_DIR$/create_inputs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +21,8 @@
       <file leaf-file-name="generate_artifact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2208">
-              <caret line="98" column="56" lean-forward="true" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
+            <state relative-caret-position="2538">
+              <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
               <folding>
                 <element signature="e#152#209#0" expanded="true" />
               </folding>
@@ -29,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_inputs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1038">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="528">
+              <caret line="105" column="45" lean-forward="false" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
               <folding>
                 <element signature="e#264#321#0" expanded="true" />
               </folding>
@@ -41,11 +42,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TEST_inputs.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TEST_inputs.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="bu16s.qsub" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s.qsub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+            <state relative-caret-position="378">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -54,7 +65,7 @@
       <file leaf-file-name="welcome.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="675">
               <caret line="26" column="71" lean-forward="false" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
               <folding>
                 <element signature="e#33#68#0" expanded="true" />
@@ -63,12 +74,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="500">
-                <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <first_editor relative-caret-position="810">
+                <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -139,7 +150,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_scripts" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -159,10 +170,10 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/dada2.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/classify.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/welcome.py" />
-        <option value="$PROJECT_DIR$/create_inputs.py" />
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_artifact.py" />
-        <option value="$PROJECT_DIR$/bu16s.qsub" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/bu16s.qsub" />
+        <option value="$PROJECT_DIR$/create_inputs.py" />
       </list>
     </option>
   </component>
@@ -215,8 +226,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,13 +291,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00006" summary="test trim">
-      <created>1592245027059</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1592245027059</updated>
     </task>
     <task id="LOCAL-00007" summary="test trim">
       <created>1592245204976</created>
@@ -624,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592572953352</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="missing space">
+      <created>1592583697146</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1592583697147</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -637,7 +648,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47431302" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1772973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18054055" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -684,7 +695,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test scripts" />
     <MESSAGE value="check for input" />
     <MESSAGE value="not empty and exists" />
     <MESSAGE value="exit if fail" />
@@ -709,7 +719,8 @@
     <MESSAGE value="purge modules; add username" />
     <MESSAGE value="provide python command in parameter file" />
     <MESSAGE value="convert biom to tsv" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert biom to tsv" />
+    <MESSAGE value="missing space" />
+    <option name="LAST_COMMIT_MESSAGE" value="missing space" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1027,13 +1038,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inputs.sh" />
-    <entry file="file://$PROJECT_DIR$/TEST_inputs.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download_test.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1075,7 +1079,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/welcome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
+        <state relative-caret-position="675">
           <caret line="26" column="71" lean-forward="false" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
           <folding>
             <element signature="e#33#68#0" expanded="true" />
@@ -1083,42 +1087,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_inputs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1038">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding>
-            <element signature="e#264#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bu16s/scripts/generate_artifact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="98" column="56" lean-forward="true" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
+        <state relative-caret-position="2538">
+          <caret line="98" column="56" lean-forward="false" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
           <folding>
             <element signature="e#152#209#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu16s.qsub">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="810">
+            <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TEST_inputs.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="500">
-            <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/bu16s.qsub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_inputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="105" column="45" lean-forward="false" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+          <folding>
+            <element signature="e#264#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
