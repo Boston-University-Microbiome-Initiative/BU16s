@@ -1,7 +1,7 @@
 """
 Generate input file for submitting to bu16s.qsub
 
-Single end mode: do not provide "--rev" argument
+Single end mode: Only provide parameters for forward read arguments
 
 After input file is generated, it can be used to submit a 16s pipeline job:
 
@@ -29,8 +29,10 @@ if __name__ == '__main__':
                                           '\tGTGCCAGCMGCCGCGGTAA', default='GTGCCAGCMGCCGCGGTAA')
     parser.add_argument('--rprimer', help='Reverse primer. Default is 806R:\n'
                                           '\tGGACTACHVHHHTWTCTAAT', default='GGACTACHVHHHTWTCTAAT')
-    parser.add_argument('--trunclen', help='Length to truncate reads to for DADA2.\n'
+    parser.add_argument('--trunclen_f', help='Length to truncate forward reads to for DADA2.\n'
                                            '\tDeafult is no truncation', default=0)
+    parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'
+                                             '\tDefault is no truncation', default=0)
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
                                           '\tDefault: ./<PROJECTNAME>_inputs.sh')
 
@@ -67,7 +69,8 @@ if __name__ == '__main__':
                    'REV_FMT',
                    'FWD_PRIMER',
                    'REV_PRIMER',
-                   'DADA2_TRUNC_LEN',
+                   'DADA2_TRUNC_LEN_F',
+                   'DADA2_TRUNC_LEN_R',
                    'PAIRED',
                    'SCRIPTSDIR',
                    'SILVA_SEQUENCES',
@@ -83,7 +86,8 @@ if __name__ == '__main__':
                   'REV_FMT': args.rev,
                   'FWD_PRIMER': args.fprimer,
                   'REV_PRIMER': args.rprimer,
-                  'DADA2_TRUNC_LEN': args.trunclen,
+                  'DADA2_TRUNC_LEN_F': args.trunclen_f,
+                  'DADA2_TRUNC_LEN_R': args.trunclen_r,
                   'PAIRED' : paired}
     # Hard coded parameters
     defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts',
