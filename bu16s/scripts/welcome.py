@@ -11,11 +11,24 @@ def center(s, l, delim='#'):
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('-i', help='Inputs file')
+    parser.add_argument('-i', help='Inputs file', required=True)
 
     args = parser.parse_args()
 
     text = """\
+                        __                            
+                   ...-'  |`.                         
+/|                 |      |  |                        
+||                 ....   |  |       .-''''-.         
+||                   -|   |  |      /  .--.  \        
+||  __                |   |  |     /  /    '-'        
+||/'__ '.   _    _ ...'   `--'    /  /.--.       _    
+|:/`  '. ' | '  / ||         |`. /  ' _   \    .' |   
+||     | |.' | .' |` --------\ |/   .' )   |  .   | / 
+||\    / '/  | /  | `---------' |   (_.'   /.'.'| |// 
+|/\'..' /|   `'.  |              \       '.'.'.-'  /  
+'  `'-'` '   .'|  '/               `----' .'   \_.'   
+          `-'  `--'                                   
 ########## BOSTON UNIVERSITY 16S PIPELINE ###########
 # CODE: https://github.com/michaelsilverstein/BU16s #
 # MAINTAINERS:                                      #
