@@ -30,5 +30,8 @@ echo
 eval $cmd
 echo
 
+# Export denoising stats
+qiime tools export --input-path $dada2_output/denoising_stats.qza --output-path $dada2_output
+
 # Add to run parameters
 echo "export dada2_output=$dada2_output" >> $RUNPARAMETERS
