@@ -93,7 +93,7 @@ if __name__ == '__main__':
                   'REV_PRIMER': args.rprimer,
                   'DADA2_TRUNC_LEN_F': args.trunclen_f,
                   'DADA2_TRUNC_LEN_R': args.trunclen_r,
-                  'DADA2_ARGS': args.dada2_args,
+                  'DADA2_ARGS': '"%s"' % args.dada2_args,
                   'PAIRED' : paired}
     # Hard coded parameters
     defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts',

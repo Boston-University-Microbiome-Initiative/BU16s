@@ -41,8 +41,8 @@
       <file leaf-file-name="create_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="40" column="80" lean-forward="false" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+            <state relative-caret-position="621">
+              <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
               <folding>
                 <element signature="e#283#340#0" expanded="true" />
               </folding>
@@ -249,13 +249,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00019" summary="full path to trim">
-      <created>1592253531500</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1592253531501</updated>
     </task>
     <task id="LOCAL-00020" summary="dada2 to outputdir">
       <created>1592255423533</created>
@@ -593,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593619807558</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="default empty str">
+      <created>1593619983387</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1593619983387</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -668,7 +668,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move create_inputs.py" />
     <MESSAGE value="download to test_files" />
     <MESSAGE value="order outputs" />
     <MESSAGE value="variable input location for welcome" />
@@ -693,7 +692,8 @@
     <MESSAGE value="path -&gt; filepath" />
     <MESSAGE value="note about single end with rev primer" />
     <MESSAGE value="add additional dada2 args" />
-    <option name="LAST_COMMIT_MESSAGE" value="add additional dada2 args" />
+    <MESSAGE value="default empty str" />
+    <option name="LAST_COMMIT_MESSAGE" value="default empty str" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1044,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="40" column="80" lean-forward="false" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+        <state relative-caret-position="621">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
           <folding>
             <element signature="e#283#340#0" expanded="true" />
           </folding>
