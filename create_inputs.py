@@ -35,6 +35,8 @@ if __name__ == '__main__':
                                            '\tDeafult is no truncation', default=0)
     parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'
                                              '\tDefault is no truncation', default=0)
+    parser.add_argument('--dada2_args', help='Additional arguments to pass to DADA2\n'
+                                             '\tEx. --dada2_args="--p-trunc-q 3"')
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
                                           '\tDefault: ./<PROJECTNAME>_inputs.sh')
 
@@ -73,6 +75,7 @@ if __name__ == '__main__':
                    'REV_PRIMER',
                    'DADA2_TRUNC_LEN_F',
                    'DADA2_TRUNC_LEN_R',
+                   'DADA2_ARGS',
                    'PAIRED',
                    'SCRIPTSDIR',
                    'SILVA_SEQUENCES',
@@ -90,6 +93,7 @@ if __name__ == '__main__':
                   'REV_PRIMER': args.rprimer,
                   'DADA2_TRUNC_LEN_F': args.trunclen_f,
                   'DADA2_TRUNC_LEN_R': args.trunclen_r,
+                  'DADA2_ARGS': args.dada2_args,
                   'PAIRED' : paired}
     # Hard coded parameters
     defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts',

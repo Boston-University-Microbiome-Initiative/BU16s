@@ -19,9 +19,9 @@ dada2_params="--i-demultiplexed-seqs $trim_output \
     --output-dir $dada2_output"
 if [ $PAIRED == "True" ]
 then
-    cmd="qiime dada2 denoise-paired --p-trunc-len-f $DADA2_TRUNC_LEN_F --p-trunc-len-r $DADA2_TRUNC_LEN_R $dada2_params"
+    cmd="qiime dada2 denoise-paired --p-trunc-len-f $DADA2_TRUNC_LEN_F --p-trunc-len-r $DADA2_TRUNC_LEN_R $dada2_params $DADA2_ARGS"
 else
-    cmd="qiime dada2 denoise-single --p-trunc-len $DADA2_TRUNC_LEN_F $dada2_params"
+    cmd="qiime dada2 denoise-single --p-trunc-len $DADA2_TRUNC_LEN_F $dada2_params $DADA2_ARGS"
 fi
 echo --------------------------------------------------------------------------------------
 echo $cmd
