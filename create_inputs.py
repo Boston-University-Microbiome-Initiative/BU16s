@@ -31,9 +31,9 @@ if __name__ == '__main__':
                                           '\tGGACTACHVHHHTWTCTAAT\n'
                                           '\tInclude in single end mode to search for reverse primer in reads',
                                             default='GGACTACHVHHHTWTCTAAT')
-    parser.add_argument('--trunclen_f', help='Length to truncate forward reads to for DADA2.\n'
+    parser.add_argument('--trunclen_f', help='Length to truncate forward reads to.\n'
                                            '\tDeafult is no truncation', default=0)
-    parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'
+    parser.add_argument('--trunclen_r', help='Length to truncate reverse reads to.\n'
                                              '\tDefault is no truncation', default=0)
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
                                           '\tDefault: ./<PROJECTNAME>_inputs.sh')
@@ -71,8 +71,8 @@ if __name__ == '__main__':
                    'REV_FMT',
                    'FWD_PRIMER',
                    'REV_PRIMER',
-                   'DADA2_TRUNC_LEN_F',
-                   'DADA2_TRUNC_LEN_R',
+                   'TRUNC_LEN_F',
+                   'TRUNC_LEN_R',
                    'PAIRED',
                    'SCRIPTSDIR',
                    'SILVA_SEQUENCES',
@@ -88,11 +88,11 @@ if __name__ == '__main__':
                   'REV_FMT': args.rev,
                   'FWD_PRIMER': args.fprimer,
                   'REV_PRIMER': args.rprimer,
-                  'DADA2_TRUNC_LEN_F': args.trunclen_f,
-                  'DADA2_TRUNC_LEN_R': args.trunclen_r,
+                  'TRUNC_LEN_F': args.trunclen_f,
+                  'TRUNC_LEN_R': args.trunclen_r,
                   'PAIRED' : paired}
     # Hard coded parameters
-    defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts',
+    defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/scripts',
                 'SILVA_SEQUENCES' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza',
                 'SILVA_TAXONOMY' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza',
                 'CONDA_ENV' : '/projectnb/talbot-lab-data/msilver/.conda/envs/qiime2-2020.2'}
