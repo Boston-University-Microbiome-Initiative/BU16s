@@ -39,7 +39,7 @@ else
         b=$(basename $f)
         sample=${b%$FWD_FMT}
         outpath=$trunc_output/"$sample"_trunc"$FWD_FMT"
-        mv $f $outpath
+        cp $f $outpath
     done
 fi
 
@@ -67,7 +67,7 @@ then
             b=$(basename $f)
             sample=${b%$REV_FMT}
             outpath=$trunc_output/"$sample"_trunc"$REV_FMT"
-            mv $f $outpath
+            cp $f $outpath
         done
     fi
 fi
