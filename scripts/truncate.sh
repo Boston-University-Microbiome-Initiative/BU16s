@@ -13,9 +13,8 @@ trunc_output=$INTERMEDIATEDIR/trunc
 if [ -d $trunc_output ]
 then
     rm -rf $trunc_output
-else
-    mkdir $trunc_output
 fi
+mkdir $trunc_output
 
 fwd_reads=$(ls $INPUTDIR/*$FWD_FMT)
 
@@ -71,3 +70,6 @@ then
         done
     fi
 fi
+
+# Add to run parameters
+echo "export trunc_output=$trunc_output" >> $RUNPARAMETERS

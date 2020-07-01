@@ -88,8 +88,8 @@
       <file leaf-file-name="dada2.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/dada2.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="614">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -108,8 +108,8 @@
       <file leaf-file-name="truncate.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/truncate.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="216">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -298,13 +298,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00023" summary="no idea">
-      <created>1592257073133</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1592257073133</updated>
     </task>
     <task id="LOCAL-00024" summary="imported silva to qiime">
       <created>1592258030718</created>
@@ -642,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593611189561</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="copy don't move">
+      <created>1593611274117</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1593611274117</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,7 +703,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="all processors for cutadapt" />
     <MESSAGE value="project renaming instructions" />
     <MESSAGE value="rm .idea" />
     <MESSAGE value="submit BU project name manually" />
@@ -728,7 +727,8 @@
     <MESSAGE value="truncate" />
     <MESSAGE value="bash vars" />
     <MESSAGE value="bash str" />
-    <option name="LAST_COMMIT_MESSAGE" value="bash str" />
+    <MESSAGE value="copy don't move" />
+    <option name="LAST_COMMIT_MESSAGE" value="copy don't move" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1080,14 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dada2.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/create_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1416">
@@ -1106,10 +1098,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/dada2.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/truncate.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="216">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
