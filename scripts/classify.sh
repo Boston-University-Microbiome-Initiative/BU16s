@@ -25,6 +25,10 @@ echo ---------------------------------------------------------------------------
 eval $cmd
 echo
 
+# Extract taxonomy
+qiime tools export --input-path $classification_output --output-path $OUTPUTDIR
+mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_SILVA99.tsv
+
 # Add to run parameters
 echo "export classification_output=$classification_output" >> $RUNPARAMETERS
 

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/truncate.sh" afterPath="$PROJECT_DIR$/scripts/truncate.sh" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -299,6 +302,23 @@
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
     </task>
+<<<<<<< Updated upstream
+=======
+    <task id="LOCAL-00022" summary="project name to manifest script">
+      <created>1592257037668</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1592257037668</updated>
+    </task>
+    <task id="LOCAL-00023" summary="no idea">
+      <created>1592257073133</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592257073133</updated>
+    </task>
+>>>>>>> Stashed changes
     <task id="LOCAL-00024" summary="imported silva to qiime">
       <created>1592258030718</created>
       <option name="number" value="00024" />
@@ -635,6 +655,7 @@
       <option name="project" value="LOCAL" />
       <updated>1593611189561</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00072" summary="copy don't move">
       <created>1593611274117</created>
       <option name="number" value="00072" />
@@ -643,6 +664,16 @@
       <updated>1593611274117</updated>
     </task>
     <option name="localTasksCounter" value="73" />
+=======
+    <task id="LOCAL-00070" summary="newline">
+      <created>1593620191275</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1593620191275</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,6 +734,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< Updated upstream
+=======
+    <MESSAGE value="variable input location for welcome" />
+    <MESSAGE value="all processors for cutadapt" />
+>>>>>>> Stashed changes
     <MESSAGE value="project renaming instructions" />
     <MESSAGE value="rm .idea" />
     <MESSAGE value="submit BU project name manually" />
@@ -722,6 +758,7 @@
     <MESSAGE value="interpret 'None' as None" />
     <MESSAGE value="path -&gt; filepath" />
     <MESSAGE value="note about single end with rev primer" />
+<<<<<<< Updated upstream
     <MESSAGE value="ascii art" />
     <MESSAGE value="export denoising stats automatically" />
     <MESSAGE value="truncate" />
@@ -729,6 +766,13 @@
     <MESSAGE value="bash str" />
     <MESSAGE value="copy don't move" />
     <option name="LAST_COMMIT_MESSAGE" value="copy don't move" />
+=======
+    <MESSAGE value="add additional dada2 args" />
+    <MESSAGE value="default empty str" />
+    <MESSAGE value="in quotes" />
+    <MESSAGE value="newline" />
+    <option name="LAST_COMMIT_MESSAGE" value="newline" />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

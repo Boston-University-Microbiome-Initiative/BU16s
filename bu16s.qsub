@@ -28,6 +28,15 @@ echo
 echo STARTING AT $(date)
 echo
 
+### 0) Truncate if OTU option
+if [[ $PIPELINES == *silva99* ]]
+then
+    bash $SCRIPTSDIR/truncate.sh $PARAMETERS
+    # Set input directory to truncated directory
+    source $RUNPARAMETERS
+    INPUTDIR=$trunc_output
+fi
+
 ### 1) CREATE QIIME2 ARTIFACT
 echo CREATING QIIME ARTIFACT
 cmd="python $SCRIPTSDIR/generate_artifact.py -i $INPUTDIR -p $PROJECTNAME -f=$FWD_FMT -r=$REV_FMT -o $INTERMEDIATEDIR"
@@ -48,26 +57,16 @@ echo
 echo TRIMMING PRIMERS
 bash $SCRIPTSDIR/trim.sh $PARAMETERS
 
-### 3) Generate ASVs
-echo GENERATING ASVs
-bash $SCRIPTSDIR/dada2.sh $PARAMETERS
+if [[ $PIPELINES == *asv* ]]
+then
+    ### 3) Generate ASVs
+    echo GENERATING ASVs
+    bash $SCRIPTSDIR/dada2.sh $PARAMETERS
 
-### 4) Classify
-echo CLASSIFY ASVs
-bash $SCRIPTSDIR/classify.sh $PARAMETERS
-
-### 5) Export
-echo EXTRACTING PROCESSED DATA
-source $RUNPARAMETERS
-# Extract ASV table
-qiime tools export --input-path $dada2_output/table.qza --output-path $dada2_output
-# Convert to tsv and remove stupid header
-biom convert -i $dada2_output/feature-table.biom -o $dada2_output/feature-table.tsv --to-tsv
-sed '1d' $dada2_output/feature-table.tsv > $OUTPUTDIR/"$PROJECTNAME"_ASV.tsv
-
-# Extract taxonomy
-qiime tools export --input-path $classification_output --output-path $OUTPUTDIR
-mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_SILVA99.tsv
+    ### 4) Classify
+    echo CLASSIFY ASVs
+    bash $SCRIPTSDIR/classify.sh $PARAMETERS
+fi
 
 echo
 echo PROCESSED DATA IS AVAILABLE AT $OUTPUTDIR

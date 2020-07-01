@@ -35,6 +35,10 @@ if __name__ == '__main__':
                                            '\tDeafult is no truncation', default=0)
     parser.add_argument('--trunclen_r', help='Length to truncate reverse reads to.\n'
                                              '\tDefault is no truncation', default=0)
+    parser.add_argument('--pipelines', help='Pipelines to process data (space-delimited):\n'
+                                            '\tasv: Generate ASVs with DADA2 [DEFAULT]\n'
+                                            '\tsilva99: Generate OTUs mapped to SILVA99 clustered at 99%',
+                                            nargs='*', choices=['asv', 'silva99'], default=['asv'])
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
                                           '\tDefault: ./<PROJECTNAME>_inputs.sh')
 
@@ -63,6 +67,7 @@ if __name__ == '__main__':
 
     """Collect arguments"""
     param_order = ['PROJECTNAME',
+                   'PIPELINES'
                    'INPUTDIR',
                    'OUTPUTDIR',
                    'INTERMEDIATEDIR',
@@ -80,6 +85,7 @@ if __name__ == '__main__':
                    'CONDA_ENV']
 
     parameters = {'PROJECTNAME': args.project,
+                  'PIPELINES': '"%s"' % args.pipelines,
                   'INPUTDIR': indir,
                   'OUTPUTDIR': outdir,
                   'INTERMEDIATEDIR': interdir,
