@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'
                                              '\tDefault is no truncation', default=0)
     parser.add_argument('--dada2_args', help='Additional arguments to pass to DADA2\n'
-                                             '\tEx. --dada2_args="--p-trunc-q 3"')
+                                             '\tEx. --dada2_args="--p-trunc-q 3"', default='')
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
                                           '\tDefault: ./<PROJECTNAME>_inputs.sh')
 
