@@ -113,7 +113,7 @@ module load miniconda
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 conda activate $CONDA_ENV"""
-    output = command + exports + GLOBAL_LOADS
+    output = command + exports + GLOBAL_LOADS + '\n'
     with open(outpath, 'w') as fh:
         fh.write(output)
     print('Saved input parameters file to: %s' % outpath)
