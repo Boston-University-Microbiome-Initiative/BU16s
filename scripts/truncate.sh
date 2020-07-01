@@ -45,7 +45,7 @@ fi
 
 # Truncate reverse reads
 rev_reads=$(ls $INPUTDIR/*$REV_FMT)
-if [ $PAIRED -eq "True" ]
+if [ $PAIRED == True ]
 then
     if [ $TRUNC_LEN_R -gt 0 ]
     then
