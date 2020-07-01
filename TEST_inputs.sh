@@ -1,4 +1,4 @@
-# python /projectnb/talbot-lab-data/msilver/BU16s/create_inputs.py --input_dir test_files --output_dir test --project TEST --fwd _1.fastq.gz --rev _2.fastq.gz
+# python /projectnb/talbot-lab-data/msilver/BU16s/create_inputs.py --input_dir test_files --output_dir test --project TEST --fwd _1.fastq.gz --rev _2.fastq.gz --fprimer ACACTGACGACATGGTTCTACAGTGCCAGCMGCCGCGGTAA --rprimer TACGGTAGCAGAGACTTGGTCTGGACTACHVGGGTWTCTAAT
 export PROJECTNAME=TEST
 export INPUTDIR=/projectnb2/talbot-lab-data/msilver/BU16s/test_files
 export OUTPUTDIR=/projectnb2/talbot-lab-data/msilver/BU16s/test
@@ -6,10 +6,11 @@ export INTERMEDIATEDIR=/projectnb2/talbot-lab-data/msilver/BU16s/test/intermedia
 export RUNPARAMETERS=/projectnb2/talbot-lab-data/msilver/BU16s/test/.runparams
 export FWD_FMT=_1.fastq.gz
 export REV_FMT=_2.fastq.gz
-export FWD_PRIMER=GTGCCAGCMGCCGCGGTAA
-export REV_PRIMER=GGACTACHVHHHTWTCTAAT
+export FWD_PRIMER=ACACTGACGACATGGTTCTACAGTGCCAGCMGCCGCGGTAA
+export REV_PRIMER=TACGGTAGCAGAGACTTGGTCTGGACTACHVGGGTWTCTAAT
 export DADA2_TRUNC_LEN_F=0
 export DADA2_TRUNC_LEN_R=0
+export DADA2_ARGS=""
 export PAIRED=True
 export SCRIPTSDIR=/projectnb/talbot-lab-data/msilver/BU16s/bu16s/scripts
 export SILVA_SEQUENCES=/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza
