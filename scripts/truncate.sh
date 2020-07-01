@@ -27,7 +27,7 @@ then
     do
         b=$(basename $f)
         sample=${b%$FWD_FMT}
-        outpath=$trunc_output/$sample_trunc$FWD_FMT
+        outpath=$trunc_output/"$sample"_trunc"$FWD_FMT"
         cmd="vsearch -fastq_filter $f -fastqout $outpath -fastq_trunclen $TRUNC_LEN_F"
         echo $cmd
         eval $cmd
@@ -38,7 +38,7 @@ else
     do
         b=$(basename $f)
         sample=${b%$FWD_FMT}
-        outpath=$trunc_output/$sample_trunc$FWD_FMT
+        outpath=$trunc_output/"$sample"_trunc"$FWD_FMT"
         mv $f $outpath
     done
 fi
@@ -54,7 +54,7 @@ then
         do
             b=$(basename $f)
             sample=${b%$REV_FMT}
-            outpath=$trunc_output/$sample_trunc$REV_FMT
+            outpath=$trunc_output/"$sample"_trunc"$REV_FMT"
             cmd="vsearch -fastq_filter $f -fastqout $outpath -fastq_trunclen $TRUNC_LEN_R"
             echo $cmd
             eval $cmd
@@ -66,7 +66,7 @@ then
         do
             b=$(basename $f)
             sample=${b%$REV_FMT}
-            outpath=$trunc_output/$sample_trunc$REV_FMT
+            outpath=$trunc_output/"$sample"_trunc"$REV_FMT"
             mv $f $outpath
         done
     fi
