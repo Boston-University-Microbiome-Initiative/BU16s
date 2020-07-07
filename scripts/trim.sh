@@ -11,12 +11,23 @@ trim_output=$INTERMEDIATEDIR/"$PROJECTNAME"_trimmed.qza
 if [ $PAIRED == "True" ]
 then
     trim_setting="trim-paired"
-    front_option="p-front-f"
-    rev_option="p-front-r"
+    if [ $PRIMER_END == "5" ]
+    then
+        front_option="p-front-f"
+        rev_option="p-front-r"
+    else
+        front_option="p-adapter-f"
+        rev_option="p-adapter-r"
+    fi
 else
     trim_setting="trim-single"
-    front_option="p-front"
     rev_option="p-anywhere"
+    if [ $PRIMER_END == "5" ]
+    then
+        front_option="p-front"
+    else
+        front_option="p-adapter"
+    fi
 fi
 
 cmd="qiime cutadapt $trim_setting \

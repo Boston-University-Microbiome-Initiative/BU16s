@@ -35,8 +35,10 @@ if __name__ == '__main__':
                                            '\tDeafult is no truncation', default=0)
     parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'
                                              '\tDefault is no truncation', default=0)
+    parser.add_argument('--primer_end', help='Which end primer is ligated to\n'
+                                             '\tOptions: 5 [default] or 3', choices=['5', '3'], default=5)
     parser.add_argument('--cutadapt_args', help='Additional arguments to pass to cutadapt\n'
-                                                '\tEx. --cutadapt_args="--p-error-rate .2"')
+                                                '\tEx. --cutadapt_args="--p-error-rate .2"', default='')
     parser.add_argument('--dada2_args', help='Additional arguments to pass to DADA2\n'
                                              '\tEx. --dada2_args="--p-trunc-q 3"', default='')
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
@@ -75,6 +77,7 @@ if __name__ == '__main__':
                    'REV_FMT',
                    'FWD_PRIMER',
                    'REV_PRIMER',
+                   'PRIMER_END',
                    'DADA2_TRUNC_LEN_F',
                    'DADA2_TRUNC_LEN_R',
                    'CUTADAPT_ARGS',
@@ -94,6 +97,7 @@ if __name__ == '__main__':
                   'REV_FMT': args.rev,
                   'FWD_PRIMER': args.fprimer,
                   'REV_PRIMER': args.rprimer,
+                  'PRIMER_END': args.primer_end,
                   'DADA2_TRUNC_LEN_F': args.trunclen_f,
                   'DADA2_TRUNC_LEN_R': args.trunclen_r,
                   'CUTADAPT_ARGS': '"%s"' % args.cutadapt_args,
