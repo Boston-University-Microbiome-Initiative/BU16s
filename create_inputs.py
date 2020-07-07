@@ -38,7 +38,7 @@ if __name__ == '__main__':
     parser.add_argument('--primer_end', help='Which end primer is ligated to\n'
                                              '\tOptions: 5 [default] or 3', choices=['5', '3'], default=5)
     parser.add_argument('--cutadapt_args', help='Additional arguments to pass to cutadapt\n'
-                                                '\tEx. --cutadapt_args="--p-error-rate .2"')
+                                                '\tEx. --cutadapt_args="--p-error-rate .2"', default='')
     parser.add_argument('--dada2_args', help='Additional arguments to pass to DADA2\n'
                                              '\tEx. --dada2_args="--p-trunc-q 3"', default='')
     parser.add_argument('--outpath', help='Where to save inputs parameter file\n'
