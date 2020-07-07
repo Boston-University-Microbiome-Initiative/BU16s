@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ebd102b-d8d6-4ca2-994c-5ec6228896ce" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_inputs.py" afterPath="$PROJECT_DIR$/create_inputs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/trim.sh" afterPath="$PROJECT_DIR$/scripts/trim.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trim.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trim.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/trim.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="668">
               <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -118,7 +127,6 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/generate_manifest.py" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.sh" />
         <option value="$PROJECT_DIR$/bu16s/bu16s.qsub" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bu16s/__init__.py" />
         <option value="$PROJECT_DIR$/inputs.sh" />
         <option value="$PROJECT_DIR$/bu16s/scripts/create_inputs.py" />
@@ -133,6 +141,7 @@
         <option value="$PROJECT_DIR$/bu16s/scripts/dada2.sh" />
         <option value="$PROJECT_DIR$/create_inputs.py" />
         <option value="$PROJECT_DIR$/scripts/trim.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -245,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592231498546</updated>
-    </task>
-    <task id="LOCAL-00022" summary="project name to manifest script">
-      <created>1592257037668</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1592257037668</updated>
     </task>
     <task id="LOCAL-00023" summary="no idea">
       <created>1592257073133</created>
@@ -589,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594126945136</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="option for 5' or 3'">
+      <created>1594127143153</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1594127143153</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -955,13 +964,6 @@
     <entry file="file://$PROJECT_DIR$/test/manifest" />
     <entry file="file://$PROJECT_DIR$/bu16s/__init__.py" />
     <entry file="file://$PROJECT_DIR$/inputs.sh" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TEST_inputs.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1039,6 +1041,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
