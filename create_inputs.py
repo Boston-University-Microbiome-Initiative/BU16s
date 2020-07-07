@@ -77,6 +77,7 @@ if __name__ == '__main__':
                    'REV_FMT',
                    'FWD_PRIMER',
                    'REV_PRIMER',
+                   'PRIMER_END'
                    'DADA2_TRUNC_LEN_F',
                    'DADA2_TRUNC_LEN_R',
                    'CUTADAPT_ARGS',
@@ -96,6 +97,7 @@ if __name__ == '__main__':
                   'REV_FMT': args.rev,
                   'FWD_PRIMER': args.fprimer,
                   'REV_PRIMER': args.rprimer,
+                  'PRIMER_END': args.primer_end,
                   'DADA2_TRUNC_LEN_F': args.trunclen_f,
                   'DADA2_TRUNC_LEN_R': args.trunclen_r,
                   'CUTADAPT_ARGS': '"%s"' % args.cutadapt_args,
