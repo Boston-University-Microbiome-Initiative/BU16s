@@ -10,6 +10,8 @@ echo "export BU16s=/projectnb/talbot-lab-data/msilver/BU16s" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `python $BU16s/create_inputs.py -h` to view arguments.
+
 # Tutorial
 ## 1. Download test data 
 Run the following command to download two small FASTQ files to `test_files/`
