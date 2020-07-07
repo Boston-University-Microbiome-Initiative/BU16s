@@ -35,6 +35,8 @@ if __name__ == '__main__':
                                            '\tDeafult is no truncation', default=0)
     parser.add_argument('--trunclen_r', help='Length to truncate reverse reads for DADA2.\n'
                                              '\tDefault is no truncation', default=0)
+    parser.add_argument('--primer_end', help='Which end primer is ligated to\n'
+                                             '\tOptions: 5 [default] or 3', choices=['5', '3'], default=5)
     parser.add_argument('--cutadapt_args', help='Additional arguments to pass to cutadapt\n'
                                                 '\tEx. --cutadapt_args="--p-error-rate .2"')
     parser.add_argument('--dada2_args', help='Additional arguments to pass to DADA2\n'
