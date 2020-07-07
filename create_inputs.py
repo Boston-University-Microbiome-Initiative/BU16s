@@ -77,7 +77,7 @@ if __name__ == '__main__':
                    'REV_FMT',
                    'FWD_PRIMER',
                    'REV_PRIMER',
-                   'PRIMER_END'
+                   'PRIMER_END',
                    'DADA2_TRUNC_LEN_F',
                    'DADA2_TRUNC_LEN_R',
                    'CUTADAPT_ARGS',
