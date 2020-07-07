@@ -96,7 +96,7 @@ if __name__ == '__main__':
                   'REV_PRIMER': args.rprimer,
                   'DADA2_TRUNC_LEN_F': args.trunclen_f,
                   'DADA2_TRUNC_LEN_R': args.trunclen_r,
-                  'CUTADAPT_ARGS': args.cutadapt_args,
+                  'CUTADAPT_ARGS': '"%s"' % args.cutadapt_args,
                   'DADA2_ARGS': '"%s"' % args.dada2_args,
                   'PAIRED' : paired}
     # Hard coded parameters
