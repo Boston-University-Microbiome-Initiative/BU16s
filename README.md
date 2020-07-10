@@ -52,3 +52,29 @@ qsub -P <BU PROJECT NAME> $BU16s/bu16s.qsub TEST_inputs.sh
 You can monitor the progress of your job with `qstat -u <BU username>` and by viewing the output log with `less bu16s.qsub.o<JOB ID>`
 
 Also, while not required, you can name your job, and subsequently your job logs, with `qsub -N <Job name> ...`.
+
+# Parameter tuning
+The nuance in processing amplicon datasets is in the parameter selection. Ideally, datasets have good quality reads that overlap - sometimes this is not the case. The following tips can be useful in troubleshooting/parameter tuning.
+
+First, create a test input directory only containing a few (2-6) samples and run the pipeline on those samples. 
+Check the `stdout` output from the cutadapt steps to check that primers are being trimmed (sometimes, primers are already trimmed) and then check the dada2 stats (`<OUTPUTDIR>/intermediate/dada2/stats.tsv`) for successful read filtering, denoising, merging, and chimera check.
+Here are possible interpretations and actions to take based on the results in `stats.tsv`:
+
+- Few reads passing filter: You may want to truncate reads to exclude low quality regions (`--trunclen_{f,r}`) or be more permissive by allowing a higher expected error (`--dada2_args="--p-max-ee-{f,r}`). 
+- Few reads merging: This could be the result of over truncation (no overlap) or too many errors in the overlapping region, in which case more truncation may be helpful.
+- Many chimeric reads: The likely culprit here is untrimmed primers
+
+One helpful tool for choosing a truncation cutoff is the [demux summarize function](https://docs.qiime2.org/2020.6/plugins/available/demux/summarize/) which generates a distribution of quality scores for each position from a subsampling of reads from your dataset. To generate this distribution:
+1. With your input directory set to a directory containing all samples, run the pipeline through the cutadapt step (easiest way to do `bash $BU16s/bu16s.qsub <path/to/inputs.sh>` and then press `Ctrl+c` once `dada2` starts)
+2. Then create the visualizer object:
+    ```bash
+    # This is just to activate a qiime conda environment
+    source <path/to/inputs.sh>
+    conda activate $CONDA_ENV
+    # Create visualizer object
+    qiime demux summarize --i-data <project>_trimmed.qza --o-visualization <project>_trimmed.qzv
+    ```
+3. Download this to your local machine (ex. in a local terminal `scp bu_username@scc1.bu.edu:/path/to/<project>_trimmed.qzv .`)
+4. Drag and drop to [https://view.qiime2.org/](https://view.qiime2.org/)
+5. Click on "Interactive Quality Plot" to see where quality dramatically dips
+    
