@@ -1,5 +1,5 @@
 # BU16s
-16s pipeline that utilizes Boston University's SCC
+16s pipeline that utilizes Boston University's SCC. Uses QIIME2 with cutadapt to trim primers and dada2 to generate ASVs. Closed-reference pipeline is in production.
 
 # Set up
 There is no installation. The code exists in the SCC.
