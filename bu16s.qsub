@@ -53,8 +53,12 @@ echo GENERATING ASVs
 bash $SCRIPTSDIR/dada2.sh $PARAMETERS
 
 ### 4) Cluster
-echo CLUSTER ASVs
+echo CLUSTERING ASVs
 bash $SCRIPTSDIR/cluster.sh $PARAMETERS
+
+### 5) Classify
+echo GENERATING CONSENSUS CLASSIFICATION
+bash $SCRIPTSDIR/classify.sh $PARAMETERS
 
 
 echo

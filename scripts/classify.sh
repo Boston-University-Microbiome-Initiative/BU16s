@@ -31,4 +31,4 @@ echo "export classification_output=$classification_output" >> $RUNPARAMETERS
 
 # Extract taxonomy
 qiime tools export --input-path $classification_output --output-path $OUTPUTDIR
-mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_SILVA99.tsv
+mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_consensus.tsv
