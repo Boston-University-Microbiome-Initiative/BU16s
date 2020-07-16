@@ -40,6 +40,7 @@ qiime tools export --input-path $dada2_output/table.qza --output-path $dada2_out
 biom convert -i $dada2_output/feature-table.biom -o $dada2_output/feature-table.tsv --to-tsv
 asv_out=$OUTPUTDIR/"$PROJECTNAME"_ASV.tsv
 sed '1d' $dada2_output/feature-table.tsv > $asv_out
+echo
 echo -e "\e[32mSaved ASV table to: $asv_out\e[0m"
 
 # Add to run parameters

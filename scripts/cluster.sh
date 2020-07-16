@@ -38,7 +38,8 @@ qiime tools export --input-path $vsearch_outdir/clustered_table.qza --output-pat
 biom convert -i $vsearch_outdir/feature-table.biom -o $vsearch_outdir/feature-table.tsv --to-tsv
 otu_out=$OUTPUTDIR/"$PROJECTNAME"_SILVA99.tsv
 sed '1d' $vsearch_outdir/feature-table.tsv > $otu_out
-echo -e "\e[32mSaved ASV table to: $otu_out\e[0m"
+echo
+echo -e "\e[32mSaved OTU table to: $otu_out\e[0m"
 
 # Add to run parameters
 echo "export vsearch_output=$vsearch_outdir" >> $RUNPARAMETERS
