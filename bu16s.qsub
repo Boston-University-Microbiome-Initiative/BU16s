@@ -41,7 +41,7 @@ eval $cmd
 demux_artifact=$INTERMEDIATEDIR/"$PROJECTNAME"_raw.qza
 # Add to run parameters
 echo "export demux_artifact=$demux_artifact" > $RUNPARAMETERS
-echo Saved QIIME artifact to: $demux_artifact
+echo -e "\e[32mSaved QIIME artifact to: $demux_artifact\e[0m"
 echo
 
 ### 2) Trim primers
