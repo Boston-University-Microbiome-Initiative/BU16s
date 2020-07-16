@@ -23,7 +23,8 @@ cmd="qiime vsearch cluster-features-closed-reference \
  --p-perc-identity .99 \
  --p-strand both \
  --p-threads $(nproc --all) \
- --output-dir $vsearch_outdir"
+ --output-dir $vsearch_outdir \
+ --verbose"
 
 echo --------------------------------------------------------------------------------------
 echo $cmd
