@@ -1,6 +1,7 @@
 #!/bin/bash -l
 
-#$ -P talbot-lab-data
+### TRIMS PRIMERS ###
+
 #$ -j y#!/usr/bin/env bash
 
 PARAMETERS=$1

@@ -1,5 +1,5 @@
 # BU16s
-16s pipeline that utilizes Boston University's SCC. Uses QIIME2 with cutadapt to trim primers, dada2 to generate ASVs, and maps ASVs to SILVA99 with vsearch. Closed-reference pipeline is in production.
+16s pipeline that utilizes Boston University's SCC. Uses QIIME2 with cutadapt to trim primers, dada2 to generate ASVs, and clusters ASVs to SILVA99 with vsearch. Closed-reference pipeline is in production.
 
 # Set up
 There is no installation. The code exists in the SCC.
@@ -12,6 +12,7 @@ source ~/.bashrc
 
 Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `python $BU16s/create_inputs.py -h` to view arguments.
 
+The classification of SILVA OTUs is at: `/projectnb/talbot-lab-data/msilver/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt`
 # Tutorial
 ## 1. Download test data 
 Run the following command to download two small FASTQ files to `test_files/`
