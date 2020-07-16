@@ -12,6 +12,7 @@ source ~/.bashrc
 
 Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `python $BU16s/create_inputs.py -h` to view arguments.
 
+The classification of SILVA OTUs is at: `/projectnb/talbot-lab-data/msilver/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt`
 # Tutorial
 ## 1. Download test data 
 Run the following command to download two small FASTQ files to `test_files/`
