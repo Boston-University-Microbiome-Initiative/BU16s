@@ -31,4 +31,7 @@ echo "export classification_output=$classification_output" >> $RUNPARAMETERS
 
 # Extract taxonomy
 qiime tools export --input-path $classification_output --output-path $OUTPUTDIR
-mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_consensus.tsv
+consensus_out=$OUTPUTDIR/"$PROJECTNAME"_consensus.tsv
+mv $OUTPUTDIR/taxonomy.tsv $consensus_out
+echo
+echo -e "\e[32mSaved Consensus Classification to: $consensus_out\e[0m"
