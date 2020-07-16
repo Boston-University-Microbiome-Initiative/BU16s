@@ -1,6 +1,7 @@
 #!/bin/bash -l
 
-#$ -P talbot-lab-data
+### CONSENSUS CLASSIFICATION OF SEQUENCES ###
+
 #$ -j y#!/usr/bin/env bash
 
 PARAMETERS=$1
@@ -28,3 +29,6 @@ echo
 # Add to run parameters
 echo "export classification_output=$classification_output" >> $RUNPARAMETERS
 
+# Extract taxonomy
+qiime tools export --input-path $classification_output --output-path $OUTPUTDIR
+mv $OUTPUTDIR/taxonomy.tsv $OUTPUTDIR/"$PROJECTNAME"_SILVA99.tsv

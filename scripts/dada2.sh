@@ -1,6 +1,7 @@
 #!/bin/bash -l
 
-#$ -P talbot-lab-data
+### GENERATES ASVs WITH DADA2 ###
+
 #$ -j y#!/usr/bin/env bash
 
 PARAMETERS=$1
@@ -32,6 +33,12 @@ echo
 
 # Export denoising stats
 qiime tools export --input-path $dada2_output/denoising_stats.qza --output-path $dada2_output
+
+# Extract ASV table
+qiime tools export --input-path $dada2_output/table.qza --output-path $dada2_output
+# Convert to tsv and remove stupid header
+biom convert -i $dada2_output/feature-table.biom -o $dada2_output/feature-table.tsv --to-tsv
+sed '1d' $dada2_output/feature-table.tsv > $OUTPUTDIR/"$PROJECTNAME"_ASV.tsv
 
 # Add to run parameters
 echo "export dada2_output=$dada2_output" >> $RUNPARAMETERS
