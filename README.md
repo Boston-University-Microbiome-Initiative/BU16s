@@ -54,6 +54,8 @@ You can monitor the progress of your job with `qstat -u <BU username>` and by vi
 
 Also, while not required, you can name your job, and subsequently your job logs, with `qsub -N <Job name> ...`.
 
+Scripts for each piece of the pipeline are in the [scripts](scripts) and any piece can be run independently by providing the input parameters file as an argument, just like running the whole pipeline.
+
 # Parameter tuning
 The nuance in processing amplicon datasets is in the parameter selection. Ideally, datasets have good quality reads that overlap - sometimes this is not the case. The following tips can be useful in troubleshooting/parameter tuning.
 
