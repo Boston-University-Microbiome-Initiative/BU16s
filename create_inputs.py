@@ -68,7 +68,7 @@ if __name__ == '__main__':
     paired = bool(args.rev)
 
     """Collect arguments"""
-    param_order = ['PROJECTNAME',
+    param_order = ('PROJECTNAME',
                    'INPUTDIR',
                    'OUTPUTDIR',
                    'INTERMEDIATEDIR',
@@ -85,8 +85,7 @@ if __name__ == '__main__':
                    'PAIRED',
                    'SCRIPTSDIR',
                    'SILVA_SEQUENCES',
-                   'SILVA_TAXONOMY',
-                   'CONDA_ENV']
+                   'SILVA_TAXONOMY')
 
     parameters = {'PROJECTNAME': args.project,
                   'INPUTDIR': indir,
