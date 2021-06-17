@@ -3,7 +3,7 @@
 # Submit to SCC: qsub bu16s.qsub PATH/TO/PARAMETERFILE
 # Local run: bash bu16s.qsub PATH/TO/PARAMETERFILE
 
-#$ -P talbot-lab-data
+#$ -P microbiome
 #$ -j y
 #$ -pe omp 16
 
