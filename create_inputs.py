@@ -104,9 +104,9 @@ if __name__ == '__main__':
                   'DADA2_ARGS': '"%s"' % args.dada2_args,
                   'PAIRED' : paired}
     # Hard coded parameters
-    defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/scripts',
-                'SILVA_SEQUENCES' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza',
-                'SILVA_TAXONOMY' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza',
+    defaults = {'SCRIPTSDIR' : '/projectnb/microbiome/BU16s/scripts',
+                'SILVA_SEQUENCES' : '/projectnb/microbiome/ref_db/silva_132_99_16S.qza',
+                'SILVA_TAXONOMY' : '/projectnb/microbiome/ref_db/silva_132_99_majority_taxonomy.qza',
                 'CONDA_ENV' : '/projectnb/talbot-lab-data/msilver/.conda/envs/qiime2-2020.2'}
     # Add defaults to user-define
     parameters.update(defaults)
