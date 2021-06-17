@@ -68,7 +68,7 @@ if __name__ == '__main__':
     paired = bool(args.rev)
 
     """Collect arguments"""
-    param_order = ['PROJECTNAME',
+    param_order = ('PROJECTNAME',
                    'INPUTDIR',
                    'OUTPUTDIR',
                    'INTERMEDIATEDIR',
@@ -85,8 +85,7 @@ if __name__ == '__main__':
                    'PAIRED',
                    'SCRIPTSDIR',
                    'SILVA_SEQUENCES',
-                   'SILVA_TAXONOMY',
-                   'CONDA_ENV']
+                   'SILVA_TAXONOMY')
 
     parameters = {'PROJECTNAME': args.project,
                   'INPUTDIR': indir,
@@ -104,10 +103,9 @@ if __name__ == '__main__':
                   'DADA2_ARGS': '"%s"' % args.dada2_args,
                   'PAIRED' : paired}
     # Hard coded parameters
-    defaults = {'SCRIPTSDIR' : '/projectnb/talbot-lab-data/msilver/BU16s/scripts',
-                'SILVA_SEQUENCES' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_16S.qza',
-                'SILVA_TAXONOMY' : '/projectnb/talbot-lab-data/msilver/ref_db/silva_132_99_majority_taxonomy.qza',
-                'CONDA_ENV' : '/projectnb/talbot-lab-data/msilver/.conda/envs/qiime2-2020.2'}
+    defaults = {'SCRIPTSDIR' : '/projectnb/microbiome/BU16s/scripts',
+                'SILVA_SEQUENCES' : '/projectnb/microbiome/ref_db/silva_132_99_16S.qza',
+                'SILVA_TAXONOMY' : '/projectnb/microbiome/ref_db/silva_132_99_majority_taxonomy.qza'}
     # Add defaults to user-define
     parameters.update(defaults)
 
@@ -117,10 +115,11 @@ if __name__ == '__main__':
     exports = '\n'.join(['export %s=%s' % (k, parameters[k]) for k in param_order]) + '\n'
     GLOBAL_LOADS = """# Load modules and inputs
 module purge
-module load miniconda
+module load miniconda/4.7.5
+module load qiime2/2020.2
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
-conda activate $CONDA_ENV"""
+conda activate $SCC_QIIME2_DIR"""
     output = command + exports + GLOBAL_LOADS + '\n'
     with open(outpath, 'w') as fh:
         fh.write(output)
