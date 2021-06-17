@@ -6,13 +6,13 @@ There is no installation. The code exists in the SCC.
 
 Enter the following to setup a variable to the BU16s code base - you only need to do this once.
 ```bash
-echo "export BU16s=/projectnb/talbot-lab-data/msilver/BU16s" >> ~/.bashrc
+echo "export BU16s=/projectnb/microbiome/BU16s" >> ~/.bashrc
 source ~/.bashrc
 ```
 
 Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `python $BU16s/create_inputs.py -h` to view arguments.
 
-The classification of SILVA OTUs is at: `/projectnb/talbot-lab-data/msilver/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt`
+The classification of SILVA OTUs is at: `/projectnb/microbiome/BU16s/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt`
 # Tutorial
 ## 1. Download test data
 Run the following command to download two small FASTQ files to `test_files/`
