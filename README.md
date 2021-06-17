@@ -14,12 +14,12 @@ Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file a
 
 The classification of SILVA OTUs is at: `/projectnb/talbot-lab-data/msilver/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt`
 # Tutorial
-## 1. Download test data 
+## 1. Download test data
 Run the following command to download two small FASTQ files to `test_files/`
 ```bash
 bash $BU16s/download_test.sh
 ```
-## 2. Create input parameters file. 
+## 2. Create input parameters file.
 The following command will generate a parameters file at `TEST_inputs.sh`. This file is used to submit a 16s pipeline job.
 ```bash
 python $BU16s/create_inputs.py \
@@ -59,11 +59,11 @@ Scripts for each piece of the pipeline are in the [scripts](scripts) and any pie
 # Parameter tuning
 The nuance in processing amplicon datasets is in the parameter selection. Ideally, datasets have good quality reads that overlap - sometimes this is not the case. The following tips can be useful in troubleshooting/parameter tuning.
 
-First, create a test input directory only containing a few (2-6) samples and run the pipeline on those samples. 
+First, create a test input directory only containing a few (2-6) samples and run the pipeline on those samples.
 Check the `stdout` output from the cutadapt steps to check that primers are being trimmed (sometimes, primers are already trimmed) and then check the dada2 stats (`<OUTPUTDIR>/intermediate/dada2/stats.tsv`) for successful read filtering, denoising, merging, and chimera check.
 Here are possible interpretations and actions to take based on the results in `stats.tsv`:
 
-- Few reads passing filter: You may want to truncate reads to exclude low quality regions (`--trunclen_{f,r}`) or be more permissive by allowing a higher expected error (`--dada2_args="--p-max-ee-{f,r}`). 
+- Few reads passing filter: You may want to truncate reads to exclude low quality regions (`--trunclen_{f,r}`) or be more permissive by allowing a higher expected error (`--dada2_args="--p-max-ee-{f,r}`).
 - Few reads merging: This could be the result of over truncation (no overlap) or too many errors in the overlapping region, in which case more truncation may be helpful.
 - Many chimeric reads: The likely culprit here is untrimmed primers
 
@@ -73,11 +73,10 @@ One helpful tool for choosing a truncation cutoff is the [demux summarize functi
     ```bash
     # This is just to activate a qiime conda environment
     source <path/to/inputs.sh>
-    conda activate $CONDA_ENV
+    conda activate $$SCC_QIIME2_DIR
     # Create visualizer object
     qiime demux summarize --i-data <project>_trimmed.qza --o-visualization <project>_trimmed.qzv
     ```
 3. Download this to your local machine (ex. in a local terminal `scp bu_username@scc1.bu.edu:/path/to/<project>_trimmed.qzv .`)
 4. Drag and drop to [https://view.qiime2.org/](https://view.qiime2.org/)
 5. Click on "Interactive Quality Plot" to see where quality dramatically dips
-    
