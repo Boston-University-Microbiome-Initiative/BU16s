@@ -78,7 +78,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', help='Input directory', required=True)
     parser.add_argument('-p', help='Project name')
     parser.add_argument('-f', help='Forward sequence filename extension\n'
-                                   '\t*Example: For "file1-r1.fastq.gz", -f = "-r1.fastq.gz"',
+                                   '\t*Example: For "file1-r1.fastq.gz", -f =-r1.fastq.gz',
                         required=True)
     parser.add_argument('-r', help='Reverse sequence filename extension\n'
                                    '\t**KEEP BLANK FOR SINGLE-END FILES**')
