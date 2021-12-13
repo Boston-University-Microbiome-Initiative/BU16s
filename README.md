@@ -71,9 +71,12 @@ One helpful tool for choosing a truncation cutoff is the [demux summarize functi
 1. With your input directory set to a directory containing all samples, run the pipeline through the cutadapt step (easiest way to do `bash $BU16s/bu16s.qsub <path/to/inputs.sh>` and then press `Ctrl+c` once `dada2` starts)
 2. Then create the visualizer object:
     ```bash
-    # This is just to activate a qiime conda environment
-    source <path/to/inputs.sh>
-    conda activate $$SCC_QIIME2_DIR
+    module purge
+    module load miniconda/4.7.5
+    module load qiime2/2020.2
+    export LC_ALL=en_US.utf-8
+    export LANG=en_US.utf-8
+    conda activate $SCC_QIIME2_DIR
     # Create visualizer object
     qiime demux summarize --i-data <project>_trimmed.qza --o-visualization <project>_trimmed.qzv
     ```
