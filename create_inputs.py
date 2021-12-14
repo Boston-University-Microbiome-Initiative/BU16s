@@ -104,7 +104,7 @@ if __name__ == '__main__':
                   'DADA2_ARGS': '"%s"' % args.dada2_args,
                   'PAIRED' : paired}
     # Hard coded parameters
-    defaults = {'SCRIPTSDIR' : '/projectnb/microbiome/BU16s/scripts',
+    defaults = {'SCRIPTSDIR' : '/projectnb/microbiome/applications/pkg/bu16s/1.0/install/scripts',
                 'SILVA_SEQUENCES' : '/projectnb/microbiome/ref_db/silva_132_99_16S.qza',
                 'SILVA_TAXONOMY' : '/projectnb/microbiome/ref_db/silva_132_99_majority_taxonomy.qza'}
     # Add defaults to user-define
