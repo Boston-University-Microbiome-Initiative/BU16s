@@ -4,10 +4,9 @@
 # Set up
 There is no installation. The code exists in the SCC.
 
-Enter the following to setup a variable to the BU16s code base - you only need to do this once.
 ```bash
-echo "export BU16s=/projectnb/microbiome/BU16s" >> ~/.bashrc
-source ~/.bashrc
+module use /projectnb/microbiome/applications/module/
+module load bu16s
 ```
 
 Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `python $BU16s/create_inputs.py -h` to view arguments.
