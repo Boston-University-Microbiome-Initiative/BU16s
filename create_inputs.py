@@ -125,6 +125,6 @@ conda activate $SCC_QIIME2_DIR"""
     with open(outpath, 'w') as fh:
         fh.write(output)
     print('Saved input parameters file to: %s\n'
-          '\tRun locally: bash $BU16s/bu16s.qsub %s \n'
+          '\tRun locally: bash bu16s.qsub %s \n'
           '\t\t--or--\n'
-          '\tSubmit batch job: qsub -N %s $BU16s/bu16s.qsub %s' % (outpath, outpath, args.project, outpath))
+          '\tSubmit batch job: qsub -N %s bu16s.qsub %s' % (outpath, outpath, args.project, outpath))
