@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Generate input file for submitting to bu16s.qsub
 
