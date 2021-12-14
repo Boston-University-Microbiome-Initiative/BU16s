@@ -36,7 +36,7 @@ create_inputs.py \
 
 If you view [`TEST_inputs.sh`](TEST_inputs.sh), you will see the above python command (commented out) along with your input parameters.
 
-You can view the documentation for this script with `python $BU16s/create_inputs.py -h`
+You can view the documentation for this script with `python create_inputs.py -h`
 
 ## 3. Submit job
 ### Local
