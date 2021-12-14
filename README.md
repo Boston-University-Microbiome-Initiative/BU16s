@@ -4,24 +4,25 @@
 # Set up
 There is no installation. The code exists in the SCC.
 
+To load the pipeline, run the following in a SCC terminal:
 ```bash
 module use /projectnb/microbiome/applications/module/
 module load bu16s
 ```
 
-Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `python $BU16s/create_inputs.py -h` to view arguments.
+Pipeline jobs are submitted using [bu16s.qsub](bu16s.qsub) with an inputs file as argument. Input files are generated with [create_inputs.py](create_inputs.py) - use `create_inputs.py -h` to view arguments.
 
 The classification of SILVA OTUs is at: `/projectnb/microbiome/BU16s/ref_db/SILVA_132_QIIME_release/taxonomy/16S_only/99/consensus_taxonomy_7_levels.txt`
 # Tutorial
 ## 1. Download test data
-Run the following command to download two small FASTQ files to `test_files/`
+Create a test directory and run the following command to download two small FASTQ files to `test_files/`
 ```bash
-bash $BU16s/download_test.sh
+download_test.sh
 ```
 ## 2. Create input parameters file.
 The following command will generate a parameters file at `TEST_inputs.sh`. This file is used to submit a 16s pipeline job.
 ```bash
-python $BU16s/create_inputs.py \
+create_inputs.py \
 --input_dir test_files \
 --output_dir test \
 --project TEST \
@@ -41,13 +42,13 @@ You can view the documentation for this script with `python $BU16s/create_inputs
 ### Local
 You can run the pipeline locally in order to observe each step. This is only recommended for this tutorial since there are only two small files.
 ```bash
-bash $BU16s/bu16s.qsub TEST_inputs.sh
+bu16s.qsub TEST_inputs.sh
 ```
 ### SCC Batch Job
 Normally, you will submit as a batch job where the pipeline will run on another computer on the SCC with more processors.
 
 ```bash
-qsub $BU16s/bu16s.qsub TEST_inputs.sh
+bu16s.qsub TEST_inputs.sh
 ```
 You can monitor the progress of your job with `qstat -u <BU username>` and by viewing the output log with `less bu16s.qsub.o<JOB ID>`
 
