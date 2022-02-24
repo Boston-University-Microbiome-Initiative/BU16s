@@ -48,7 +48,7 @@ bu16s.qsub TEST_inputs.sh
 Normally, you will submit as a batch job where the pipeline will run on another computer on the SCC with more processors.
 
 ```bash
-qsub bu16s.qsub TEST_inputs.sh
+qsub $SCC_BU16S_DIR/bu16s.qsub TEST_inputs.sh
 ```
 You can monitor the progress of your job with `qstat -u <BU username>` and by viewing the output log with `less bu16s.qsub.o<JOB ID>`
 
