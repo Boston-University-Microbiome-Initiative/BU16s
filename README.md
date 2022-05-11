@@ -6,7 +6,6 @@ There is no installation. The code exists in the SCC.
 
 To load the pipeline, run the following in a SCC terminal:
 ```bash
-module use /projectnb/microbiome/applications/module/
 module load bu16s
 ```
 
