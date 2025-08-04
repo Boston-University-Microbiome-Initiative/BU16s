@@ -1,5 +1,5 @@
-# BU16s
-16s pipeline that utilizes Boston University's SCC to process raw amplicon sequences into ASVs and OTUs. Uses QIIME2 with cutadapt to trim primers, dada2 to generate ASVs, and clusters ASVs to SILVA99 with vsearch.
+# BU Amplicon Sequencing Pipeline
+Amplicon sequence processing pipeline that utilizes Boston University's SCC to process raw amplicon (16S, ITS, etc.) sequences into ASVs and OTUs. Uses QIIME2 with cutadapt to trim primers, dada2 to generate ASVs, and clusters ASVs to SILVA99 with vsearch.
 
 # Set up
 There is no installation. The code exists in the SCC.
